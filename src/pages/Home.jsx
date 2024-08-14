@@ -4,8 +4,12 @@ import background from "../assets/homebackground.png";
 import backgroundFilter from "../assets/homefilter.png";
 import Navbar from "../Common/Navbar";
 import { FaArrowRight } from "react-icons/fa";
+import {motion} from "framer-motion"
 
 function Home() {
+
+   
+
   return (
     <div className="homeWrap">
         
@@ -25,16 +29,33 @@ function Home() {
       <Navbar />
 
       <div className="homeCont">
-        <div className="homeContent">
-          <h2>Explore the world with exciting people</h2>
-          <p>
+
+        <div 
+      
+        className="homeContent">
+          <motion.h2 
+           initial={{x:-100 , opacity:0}}
+           animate={{x:0 , opacity:1}}
+          transition={{delay:0.2 , x:{type:"spring" , stiffness:60 } , opacity:{duration:0.4} , ease:"easeIn" , duration:1}} 
+          
+          >Explore the world with exciting people</motion.h2>
+          <motion.p  
+             initial={{x:-100 , opacity:0}}
+             animate={{x:0 , opacity:1}}
+            transition={{delay:0.2 , x:{type:"spring" , stiffness:60 } , opacity:{duration:1} , ease:"easeIn" , duration:0.6}} 
+          >
             We help people find co travellers and also structure their travel
             plans{" "}
-          </p>
-          <button>
+          </motion.p>
+          <motion.button
+            initial={{x:-100 , opacity:0}}
+            animate={{x:0 , opacity:1}}
+           transition={{delay:0.4 , x:{type:"spring" , stiffness:60 } , opacity:{duration:0.6} , ease:"easeIn"}} 
+          >
             <span>Book With Us</span> <FaArrowRight />{" "}
-          </button>
+          </motion.button>
         </div>
+
       </div>
 
 

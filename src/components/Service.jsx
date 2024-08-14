@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import "./service.css"
 import rec3 from "../assets/rectange3.png"
 import neRec from "../assets/newRec.png"
 import { FaArrowRight } from "react-icons/fa";
+import { useScroll , motion, useTransform } from 'framer-motion'
+
 
 
 function Service() {
+
+  const ref = useRef(null);
+
+  const {scrollYProgress} =  useScroll({
+     target: ref , 
+     offset:["0 1" , "1.20 1"]
+   })
+
+    const scaleProgress =useTransform(scrollYProgress , [0 , 1] , [0.5 , 1]);
+
   return (
-    <div className='servicewrap'>
+    <motion.div style={{scale: scaleProgress }} ref={ref} className='servicewrap'>
 
         <div className="servicecont">
 
@@ -28,7 +40,7 @@ function Service() {
 
         </div>
          
-    </div>
+    </motion.div>
   )
 }
 
