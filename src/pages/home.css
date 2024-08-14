@@ -1,0 +1,150 @@
+.homeWrap{
+    position: relative;
+     width: 100%;
+     overflow-x: hidden !important;
+}
+
+.background{
+    width: 100%;
+}
+.backgroundFilter{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+}
+
+.homeCont{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.homeContent{
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+ max-width: 1400px;
+ width: 100%;
+ margin: 0 auto;
+ height: fit-content;
+ padding: 0px 14px;
+ overflow: hidden;
+}
+
+.homeContent h2{
+    font-family: Inter;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 74.83px;
+    overflow-y: hidden;
+text-align: left;
+color: #FFFFFF;
+height: 100%;
+max-width: 800px;
+
+}
+.homeContent p{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29.05px;
+    text-align: left;
+color: white;    
+max-width: 430px;
+}
+.homeContent button{
+    width: 204px;
+    height: 47px;
+    background: #CCF32F;
+    border: 2px solid #CCF32F;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+}
+.homeContent button span{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+color: #141841;    
+    
+}
+
+/* for homesection 4 */
+.hsec4wrap{
+    position: relative;
+    width: 100%;
+    background: #F3F3F3;
+
+}
+
+
+
+.hsec4cont{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.hsec4cont h2{
+    font-family: Playfair Display;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 79.98px;
+    text-align: center;
+color: #0E3D4D;    
+
+}
+
+.sec4image{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.sec4image .sec4sec1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sec4sec2{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.seealljour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 222px;
+height: 47px;
+border-radius: 20px;
+background: #CCF32F;
+border: 2px solid #CCF32F;
+margin: 0 auto;
+
+}
+.seealljour span{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+color: #141841;    
+}
