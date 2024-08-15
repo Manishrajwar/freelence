@@ -1,0 +1,495 @@
+.pdsec1cont{
+    width: 100%;
+    display: flex;
+    gap: 9px;
+}
+
+.pdsec1d1{
+    width: 50%;
+    max-height: 446px;
+}
+
+.pdsec1images{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 9px 9px;
+    width: 50%;
+}
+.pdsec1images img{
+   width: 100%;
+   max-height: 218px;
+}
+.pdsec1images img:nth-child(2){
+ border-radius: 0px 20px 0px 0px;
+}
+.pdsec1images img:nth-child(4){
+ border-radius:0px 0px 20px 0px;
+}
+
+/* for secstion2  */
+
+.pdSec2wrap{
+    display: flex;
+gap: 30px;
+padding: 40px 0px;
+justify-content: space-between;
+}
+
+.pdSec2Right{
+    max-width: 464px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.pdSec2Right .sec2ritop{
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    width: 100%;
+height: 199px;
+border-radius: 12px ;
+display: flex;
+flex-direction: column;
+gap: 16px;
+padding: 22px;
+box-shadow: 0px 4px 4px 0px #00000040;
+
+}
+ .sec2ritop .s2ttop{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.pds2left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.pds2left .pdlepar1{
+  display: flex;
+  gap: 4px;
+  align-items: flex-end;
+  font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 20px;
+text-align: left;
+color: #000000;
+}
+.pds2left .pdlepar1 p{
+font-size: 40px;
+
+}
+.pds2left .pdlepar1 span{ 
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+color: #A4A1A1;    
+}
+.pds2left .pdlepar2{ 
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+color: #7D7C7C;    
+display: flex;
+gap: 10px;
+align-items: flex-end;
+
+}
+
+.pds2left  .pdlepar2 span{ 
+    font-size: 24px;
+    text-decoration: line-through;
+
+}
+
+
+
+.pds2topright{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.pds2topright span:nth-child(2){
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+color: #008753;    
+}
+.pds2topright span:nth-child(3){
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+color: #7D7C7C;    
+}
+
+.line1 {
+    border: 1px solid;
+    width: 100%;
+    border-image-source: linear-gradient(90deg, rgba(225, 222, 222, 0.3) 0%, #7B7979 50%, rgba(227, 226, 226, 0.3) 95.4%);
+    border-image-slice: 1;
+}
+
+.sec2ritop button{
+    width: 100%;
+height: 51px;
+border-radius: 10px;
+background: #CCF32F;
+
+
+}
+.sec2ritop button span{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+color: #000000;    
+}
+
+.formdetail{
+    width: 100%;
+height: fit-content;
+border-radius: 12px ;
+background: #FFFFFF;
+border: 1px solid #E3E3E3;
+box-shadow: 0px 4px 4px 0px #00000040;
+display: flex;
+flex-direction: column;
+gap: 14px;
+padding: 18px 23px;
+
+}
+.formdetail h3{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+color: #000000;    
+
+}
+.formdetail form{
+   display: flex;
+   flex-direction: column;
+   gap: 9px;
+}
+.formdetail form label{
+    width: 100%;
+    height: 54px;
+    border-radius: 6px ;
+    background: #F4EFEF00;
+    border: 1px solid #D4D3D3;
+    display: flex;
+    flex-direction: column;
+    /* gap: 7px; */
+    padding:9px 14px;
+    
+}
+.formdetail form label p{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+color: #00000069;    
+}
+.formdetail form label p span{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FF4747;
+    text-align: left;
+    
+}
+.formdetail form label input{
+   width: 100%;
+   background-color: transparent;
+   outline: none;
+   border: none;
+   font-family: Poppins;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+
+}
+
+.dohalf{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.phonenumbeint{
+    max-width: 91px;
+    width: 100%;
+    height: 49px;
+    padding: 14px;
+border-radius: 6px ;
+border: 1px solid #D4D3D3;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #000000C7;
+
+}
+.myphone{
+    max-width: 313px;
+    width: 100%;
+    height: 49px;
+    border-radius: 6px ; 
+    border: 1px solid #D4D3D3;
+    padding: 14px;
+    font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #000000C7;
+
+}
+.Traveldate{
+    max-width: 194px;
+    width: 100%;
+    height: 49px;
+    border-radius: 6px ; 
+    border: 1px solid #D4D3D3;
+    padding: 14px;
+    font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #000000C7;
+
+}
+.Duration{
+    max-width: 211px;
+    width: 100%;
+    height: 49px;
+    border-radius: 6px ; 
+    border: 1px solid #D4D3D3;
+    padding: 14px;
+    font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #000000C7;
+
+}
+
+.textaremesge{
+    max-width: 416px;
+    width: 100%;
+max-height: 83px;
+height: 100%;
+border-radius: 6px ;
+background-color: #D9D9D900;
+border: 1px solid #D4D3D3;
+padding: 15px;
+resize: none;
+
+}
+
+.requeeqebtn{
+    width: 100%;
+border-radius: 10px;
+background: #CCF32F;
+height: 58px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 20px;
+color: #000000;
+}
+
+.pdSec2left{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.pdSec2left h2{
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+color: #000000;  
+max-width: 632px;  
+}
+
+.pds22leftop{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pds22leftop .pdsltf{
+    width: 81px;
+    height: 39px;
+    border-radius: 20px ;
+    background: #CCF32F;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+color: #000000;
+display: flex;
+align-items: center;
+justify-content: center;        
+}
+
+.pdltse{
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.pdflsfir{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pdflsfir span{
+    font-family: Poppins;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: left;
+color: #C0B9B9;    
+}
+.pdflsfir div{
+  display: flex;
+  flex-direction: column;
+}
+.pdflsfir div p:nth-child(1){
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 19.5px;
+    text-align: left;
+color: #9E9E9E;    
+}
+.pdflsfir div p:nth-child(2){
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: left;
+color: #7D7C7C;    
+}
+
+.verline{
+    width: 2px;
+height: 31px;
+background-color: #D9D9D9;
+}
+
+.line2{
+    border: 1px solid;
+    width: 100%;
+    border-image-source: linear-gradient(90deg, rgba(225, 222, 222, 0.24) 0%, rgba(123, 121, 121, 0.8) 50%, rgba(227, 226, 226, 0.24) 95.4%);
+    border-image-slice: 1;
+}
+
+.addmargintop{
+    margin-top: 80px;
+}
+
+.triphigh{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.triphigh h3{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+color: #000000;    
+}
+.triphigh ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 763px;
+    position: relative;
+}
+
+.triphigh ul li{
+    font-family: Poppins;
+    font-size: 16px;
+    list-style:none; /* Removes the default bullet points */
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+color: #7C7A7A;    
+}
+
+.triphigh ul li::before {
+    content: "•"; 
+    position: absolute;
+    left: -20px;
+    font-size: 18px;
+    color: #7C7A7A; 
+}
+
+.toogleBtns{
+    width: 100%;
+height: 55px;
+background-color: red;
+background: white;
+border: 1px solid #E1DFDF;
+display: flex;
+align-items: center;
+gap: 7px;
+margin: 20px 0px;
+
+}
+
+.samebtnproepty{
+    width: 50%;
+height: 43px;
+border-radius: 10px ;
+background: #E8EAE1;
+
+}
+.samebtnproepty span{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+color: #878686;    
+}
+
+.curtoglebtn{
+    background: #CCF32F;
+
+}
+.curtoglebtn span{
+    background: #CCF32F;
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 600;
+line-height: 27px;
+color: #000000;
+
+}
+
+.pdimg3{
+    width: 100%;
+    max-height: 214px;
+}

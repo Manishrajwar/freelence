@@ -64,6 +64,7 @@ color: #000000;
 }
 .singswipe .swipbg{
     width: 100%;
+   max-height: 260px; 
 border-radius: 20px 20px 0px 0px;
 }
 
@@ -94,6 +95,7 @@ color: #FFFFFF;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 10px;
 }
 .swimidCont .swmidcleft{
  display: flex;
@@ -175,3 +177,76 @@ color: #000000;
     z-index: 10;
   }
   
+
+  @media (max-width:1340px) {
+    .singswipe{
+        max-width: 500px;
+        height: 444px;
+    }
+    .checkdbtns{
+       width: 90%;
+    }
+  }
+  @media (max-width:1160px) {
+    .singswipe{
+        max-width: 560px;
+        height: 474px;
+    }
+    .checkdbtns{
+       width: 90%;
+    }
+  }
+
+  @media (max-width:750px) {
+    .singswipe{
+        max-width: 560px;
+        height: fit-content;
+        padding-bottom: 24px;
+    }
+    .swiperbtns{
+        display: none;
+    }
+    .hs2top .cantafort{
+        max-width: 429px;
+        width: 100%;
+        height: 75px;
+    }
+    .hs2top .cantafort span{
+        font-size: 30px;
+       
+    }
+    .hs2top h2{
+    font-size: 30px;
+    }
+    
+
+  }
+  @media (max-width:550px) {
+    .swiperbtns{
+        display: none;
+    }
+    .hs2top .cantafort{
+        max-width: 329px;
+        height: 60px;
+    }
+    .hs2top .cantafort span{
+        font-size: 20px;
+       
+    }
+    .hs2top h2{
+    font-size: 20px;
+    line-height: 32px;
+    }
+    .swimidCont .swmidcleft h3{
+        font-size: 18px;
+    }
+    
+   
+  }
+
+  @media (max-width:500px) {
+    .swimidCont{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+  }

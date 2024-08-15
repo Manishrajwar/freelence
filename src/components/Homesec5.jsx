@@ -30,7 +30,7 @@ function Homesec5() {
         <h2>Browse Our Top Packages</h2>
 
         <div className="brwseritems">
-          <img src={left} alt="left" onClick={handlePrevClick} style={{ cursor: 'pointer' }} />
+          <img src={left} alt="left" onClick={handlePrevClick} className="bwseritembtn" style={{ cursor: 'pointer' }} />
 
           <Swiper
             rewind={true}
@@ -39,6 +39,17 @@ function Homesec5() {
             slidesPerView={3}
             spaceBetween={10}
             ref={swiperRef} // Attach the ref to Swiper
+            breakpoints={{
+              1250: {
+                slidesPerView: 3, // Show 2 slides per view for screen widths of 1660px and above
+              },
+              850:{
+                slidesPerView:2
+              } ,
+              200:{
+                slidesPerView:1
+              }
+            }}
           >
             <SwiperSlide>
               <div className="sec5Item">
@@ -64,6 +75,7 @@ function Homesec5() {
                 </button>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="sec5Item">
                 <img src={img1} alt="img" className="sec5img" />
@@ -88,6 +100,7 @@ function Homesec5() {
                 </button>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="sec5Item">
                 <img src={img1} alt="img" className="sec5img" />
@@ -112,6 +125,7 @@ function Homesec5() {
                 </button>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
               <div className="sec5Item">
                 <img src={img1} alt="img" className="sec5img" />
@@ -136,10 +150,11 @@ function Homesec5() {
                 </button>
               </div>
             </SwiperSlide>
-            {/* Add more SwiperSlides as needed */}
+
           </Swiper>
 
-          <img src={right} alt="right" onClick={handleNextClick} style={{ cursor: 'pointer' }} />
+          <img src={right} alt="right" onClick={handleNextClick} className="bwseritembtn" style={{ cursor: 'pointer' }} />
+
         </div>
       </div>
     </div>

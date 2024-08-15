@@ -21,8 +21,17 @@ const Home2swiper = forwardRef((props, ref) => {
       modules={[Navigation]}
       className="mySwiper"
       slidesPerView={2}
-      spaceBetween={0}
+      spaceBetween={20}
       ref={swiperRef}
+
+      breakpoints={{
+        1160: {
+          slidesPerView: 2, 
+        },
+        200:{
+          slidesPerView:1 
+        }
+      }}
     >
       <SwiperSlide>
         <div className="singswipe">
@@ -42,6 +51,7 @@ const Home2swiper = forwardRef((props, ref) => {
           <button className="checkdbtns">
             <span>CHECK DETAILS</span>
           </button>
+
         </div>
       </SwiperSlide>
 

@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.css";
 import img from "../assets/Img.png";
 import {motion} from "framer-motion"
+import bannerimg from "../assets/bannerimg.png"
+import bannerimgfilter from "../assets/banfiltes3.png"
 
 function Homesec3() {
   return (
@@ -27,7 +29,22 @@ function Homesec3() {
             <span>Book Now</span>
           </button>
         </div>
+
       </motion.div>
+
+       <div className="sec3disbanner">
+
+        <img src={bannerimg} alt="bannerimg" className="bannerimg" />
+
+         <img src={bannerimgfilter} alt="bannerimgfilter" className="bannerimgfilter" />
+
+         <div className="s3bancontent">
+          <h4>Discover Special Offers!</h4>
+          <p>Make sure to check out these special promotions</p>
+          <button><span>Book Now</span></button>
+         </div>
+
+       </div>
 
     </div>
   );

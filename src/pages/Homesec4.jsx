@@ -7,10 +7,12 @@ import frame3 from '../assets/Frame4.png';
 import frame4 from '../assets/Frame5.png';
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import TopDestiSwiper from "../components/topDestiSwiper"
 
 function Homesec4() {
   return (
     <div className='hsec4wrap'>
+
       <motion.div className="hsec4cont">
         <h2>Top Destination</h2>
 
@@ -90,8 +92,16 @@ function Homesec4() {
           <button className='seealljour'>
             <span>See all journeys</span> <FaArrowRight />
           </button>
+
         </div>
+
+
+        <TopDestiSwiper />
+
+
+
       </motion.div>
+
     </div>
   );
 }
