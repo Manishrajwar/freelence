@@ -504,6 +504,7 @@ flex-direction: column;
 gap: 15px;
 }
 
+
 .arivepotalDiv nav{
     display: flex;
     align-items: center;
@@ -625,4 +626,86 @@ justify-content: center;
 font-weight: 500;
 line-height: 15px;
 color: #008753;
+}
+
+.pdsesecondimage{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.pdsesecondimage .rowiamges{
+ display: flex;
+ align-items: center;
+ gap: 14px;
+}
+
+.pdsesecondimage .rowiamges img{ 
+ width: 50%;
+ max-height: 172px;
+}
+
+
+.rec92img{
+    max-height: 80px;
+    height: 100%;
+    width: 100%;
+}
+
+.detailcopy1{
+    max-height: 214px;
+    width: 100%;
+}
+
+.arvidiv{
+    width: 100%;
+height: 57px;
+border-radius: 10px ;
+border: 1px solid #E1DFDF;
+display: flex;
+align-items: center;
+padding: 14px 18px;
+gap: 15px;
+
+}
+
+.detailcopy2{
+    max-width: 830px;
+    width: 100%;
+    margin: 0 auto;
+}
+.arvidiv .daytag{
+    width: 56.08px;
+    height: 27px;
+    border-radius: 20px ;
+    background: #CCF32F;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16.5px;
+color: #000000;        
+
+}
+.arvidiv h3{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+color: #000000;     
+
+}
+.arvidiv .linevert{
+    width: 20px;
+    transform: rotate(90deg);
+    border: 1px solid #A8A7A7;    
+
+}
+.arvidiv .totacost{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+color: #000000;    
+
 }

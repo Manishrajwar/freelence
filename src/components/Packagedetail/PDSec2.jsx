@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import "./pd.css";
 import starts from "../../assets/startss.png";
 import pdimg3 from  "../../assets/pdimg3.png"
+import rec92 from "../../assets/Rectangle 1922.png"
+import rec90 from "../../assets/Rectangle 1920.png"
+import copy1 from "../../assets/detailcopy1.png"
+import copy2 from "../../assets/detailcopy2.png"
+import copy3 from "../../assets/detailcopy3.png"
+import copy4 from "../../assets/detailcopy4.png"
+import copy5 from "../../assets/detailcopy5.png"
+import copy6 from "../../assets/detailcopy6.png"
 
 const data = [ "ITINERARY" , "SUMMARISED VIEW"]
 
@@ -140,6 +148,82 @@ function PDSec2() {
 
             </div>
 
+          <hr />
+
+          <div className="pdsefistsec">
+              <h3>Stay At</h3>
+              <h4>Transfer in Sedan, SUV or similar</h4>
+
+         
+                <div className="pdsesecondimage">
+
+                     <div className="rowiamges">
+                       <img src={rec90} alt="" />
+                       <img src={rec90} alt="" />
+                     </div>
+
+                     <img src={rec92} className="rec92img" alt="" />
+
+                </div>
+
+
+            </div>
+
+            <hr />
+
+            <div className="pdsefistsec">
+              <h3>Activity</h3>
+              <h4>Day Trip to Corbyn Cove Beach and Cellular Jail on a Private basis</h4>
+
+         
+               <img src={copy1} className="detailcopy1" alt="" />
+
+            </div>
+
+         </div>
+
+         <img src={copy2} alt="" className="detailcopy1" />
+
+         <div className="arvidiv">
+          <p className="daytag">Day 2</p>
+          <h3>Arrival in Portblair</h3>
+          <p className="linevert"></p>
+          <p className="totacost">Total Cost : $10</p>
+         </div>
+
+         <img src={copy3} alt="" className="detailcopy1" />
+
+         <div className="arvidiv">
+          <p className="daytag">Day 3</p>
+          <h3>Arrival in Portblair</h3>
+          <p className="linevert"></p>
+          <p className="totacost">Total Cost : $10</p>
+         </div>
+
+         <img src={copy4} alt="" className="detailcopy1" />
+
+         <div className="arvidiv">
+          <p className="daytag">Day 4</p>
+          <h3>Arrival in Portblair</h3>
+          <p className="linevert"></p>
+          <p className="totacost">Total Cost : $10</p>
+         </div>
+
+         <img src={copy5} alt="" className="detailcopy1" />
+
+         <div className="arvidiv">
+          <p className="daytag">Day 5</p>
+          <h3>Arrival in Portblair</h3>
+          <p className="linevert"></p>
+          <p className="totacost">Total Cost : $10</p>
+         </div>
+         <img src={copy6} alt="" className="detailcopy1" />
+
+         <div className="arvidiv">
+          <p className="daytag">Day 6</p>
+          <h3>Arrival in Portblair</h3>
+          <p className="linevert"></p>
+          <p className="totacost">Total Cost : $10</p>
          </div>
 
       </div>
@@ -228,6 +312,8 @@ function PDSec2() {
         </div>
 
       </div>
+
+      
 
     </div>
   );
