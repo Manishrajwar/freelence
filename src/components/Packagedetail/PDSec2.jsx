@@ -11,7 +11,9 @@ function PDSec2() {
  const [togleBtn , setTogleBtns] = useState(0);
 
   return (
+
     <div className="pdSec2wrap">
+
       {/* left side */}
       <div className="pdSec2left">
 
@@ -53,6 +55,7 @@ function PDSec2() {
         </div>
 
         <p className="line2"></p>
+
         <p className="line2 addmargintop"></p>
 
 
@@ -94,28 +97,56 @@ function PDSec2() {
          <div className="arivepotalDiv">
 
             <nav>
-                <p>Day 1</p>
-                <p>Arrival in Portblair</p>
-                <p></p>
-                <p>Total Cost : $10</p>
+                <p className="daytag">Day 1</p>
+                <p className="arivtext"> Arrival in Portblair</p>
+                <p className="lineh2"></p>
+                <p className="totalcost">Total Cost : $10</p>
             </nav>
 
             <hr />
 
-            <p>After arrival, you will be transferred to the hotel for check in. Later, you will get transferred to the Corbyn Cove Beach, admire its beautiful shore and palm trees. Next, you will visit the Cellular Jail and enjoy a light show, before getting dropped off at the hotel for an overnight stay.</p>
+            <p className="aftetext">After arrival, you will be transferred to the hotel for check in. Later, you will get transferred to the Corbyn Cove Beach, admire its beautiful shore and palm trees. Next, you will visit the Cellular Jail and enjoy a light show, before getting dropped off at the hotel for an overnight stay.</p>
 
             <hr />
 
-            
+            <div className="pdsefistsec">
+              <h3>Private Transport</h3>
+              <h4>Transfer in Sedan, SUV or similar</h4>
+
+               <label>
+
+              <div className="shadowdiv">
+                <p>Veer Savarkar International Airport </p>
+              </div>
+
+              <p className="fromtag">
+                FROM
+              </p>
+
+               </label>
+
+               <label>
+
+              <div className="shadowdiv">
+                <p>Veer Savarkar International Airport </p>
+              </div>
+
+              <p className="fromtag">
+                TO
+              </p>
+
+               </label>
+
+
+            </div>
 
          </div>
-
-
 
       </div>
 
       {/* right side  */}
       <div className="pdSec2Right">
+
         <div className="sec2ritop">
           <div className="s2ttop">
             {/* left  */}
@@ -195,7 +226,9 @@ function PDSec2() {
             </button>
           </form>
         </div>
+
       </div>
+
     </div>
   );
 }

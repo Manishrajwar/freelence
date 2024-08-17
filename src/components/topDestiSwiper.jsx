@@ -11,7 +11,7 @@ const topDestiSwiper = () => {
     <Swiper
       rewind={true}
       modules={[Navigation]}
-      className="mySwiper"
+      className="mySwiper44"
       slidesPerView={1}
       spaceBetween={20}
       breakpoints={{

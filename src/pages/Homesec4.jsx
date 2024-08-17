@@ -96,8 +96,11 @@ function Homesec4() {
         </div>
 
 
+         <div className='TopDestiSwiper'>
+
         <TopDestiSwiper />
 
+         </div>
 
 
       </motion.div>

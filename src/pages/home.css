@@ -282,15 +282,12 @@ max-width: 430px;
 
 }
 
-@media (max-width:690px) {
-    .sec4image{
-        display: none;
-    }
-}
+
 
 @media (max-width:500px) {
     .hsec4cont h2{
        font-size: 40px;
+       line-height: 50px;
     }
     
 }
@@ -306,4 +303,18 @@ max-width: 430px;
     width: 100%;
     padding: 0px 18px;
     margin: 0 auto;
+}
+
+.TopDestiSwiper{
+    display: none;
+}
+
+@media (max-width:690px) {
+    .sec4image{
+        display: none;
+    }
+
+    .TopDestiSwiper{
+        display: flex;
+    }
 }

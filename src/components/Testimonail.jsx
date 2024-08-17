@@ -1,10 +1,11 @@
 import React from "react";
-import "./blog.css";
+import "./blog.css"; // Ensure this file includes pagination styling
 import star from "../assets/starts.png";
 import profile from "../assets/profile.png";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import "swiper/css/pagination"; // Import Swiper pagination styles
+import { Navigation, Pagination } from "swiper/modules"; // Import Swiper Pagination module
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
 
@@ -24,10 +25,23 @@ function Testimonail() {
 
         <Swiper
           rewind={true}
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]} // Add Pagination module here
           className="mySwiper"
-          slidesPerView={3}
-          spaceBetween={0}
+          pagination={{ clickable: true }} // Enable clickable pagination dots
+          breakpoints={{
+            1050:{
+              spaceBetween:20 , 
+              slidesPerView: 3
+            } , 
+            750:{
+              spaceBetween:20 , 
+              slidesPerView: 2
+            } , 
+            200:{
+              spaceBetween:20 , 
+              slidesPerView: 1
+            }
+          }}
         >
           {[...Array(3)].map((_, index) => (
             <SwiperSlide key={index}>
@@ -38,7 +52,7 @@ function Testimonail() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 variants={slideUpAnimation}
               >
-                <img className="starimg" src={star} alt="" />
+                <img className="starimg" src={star} alt="Star" />
                 <p className="estipara">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Suspendisse varius enim in eros elementum tristique. Duis
@@ -46,7 +60,7 @@ function Testimonail() {
                 </p>
 
                 <div className="profildea">
-                  <img src={profile} alt="" />
+                  <img src={profile} alt="Profile" />
                   <div className="profc">
                     <p className="namep">Orlando Diggs</p>
                     <p className="addpre">Position, Company name</p>

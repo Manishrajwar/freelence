@@ -22,6 +22,7 @@ function WaterActivity() {
         >Top Water Sports Activities</motion.h2>
 
         <div className="wateracitems">
+          
           {/* Left Image - Diagonally from bottom left */}
           <motion.img
             initial={{ y: 100, opacity: 0 }}

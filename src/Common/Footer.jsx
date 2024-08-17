@@ -8,8 +8,10 @@ function Footer() {
       <div className="footecont">
         
         <div className="footercdetails">
+          
           {/* frist section */}
           <div className="fotsec2">
+
             <label>
               <h3>Call Us</h3>
               <p>+91 XXXXXXXXXX</p>
@@ -49,6 +51,7 @@ function Footer() {
               </p>
             </label>
           </div>
+
         </div>
 
     

@@ -11,10 +11,8 @@ function PackageDetail() {
 
         <Navbar2 />
 
-     
       <div className="pacakageWrapCont">
 
-        
         <PDSec1  />
 
         <PDSec2 />

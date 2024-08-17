@@ -178,6 +178,31 @@ color: #579B84;
     display: none;
 }
 
+@media (max-width:1270px) {
+    .fotsec1 label h3{
+       font-size: 20px;
+    }
+    .fotsec1 label p{
+      font-size: 20px;
+    }
+    .fotsec2 label h3{
+       font-size: 20px;
+    }
+    .fotsec2 label p{
+      font-size: 20px;
+    }
+}
+
+@media (max-width:1100px) {
+    .footercdetails{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        margin: 0 auto;
+       
+    }
+    
+}
+
 @media (max-width:750px) {
     .navitems{
         display: none;
@@ -185,4 +210,30 @@ color: #579B84;
     .smallnav{
         display: flex;
     }
+}
+
+@media (max-width:800px) {
+    .lasfop{
+       font-size: 16px;
+    }
+    
+    .lastfoteright span{
+       font-size: 16px;
+    }
+}
+
+@media (max-width:580px) {
+    .lastfooter{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media (max-width:520px) {
+    .footercdetails{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+    
 }
