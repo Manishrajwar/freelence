@@ -8,6 +8,7 @@ import "swiper/css/pagination"; // Import Swiper pagination styles
 import { Navigation, Pagination } from "swiper/modules"; // Import Swiper Pagination module
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
+import { TESTIMONIAL } from "../Data/Home";
 
 function Testimonail() {
   const slideUpAnimation = {
@@ -19,8 +20,8 @@ function Testimonail() {
     <div className="testiwrap">
       <div className="testiCont">
         <div className="testtop">
-          <p className="testitag">What customers say</p>
-          <h2>Customer testimonials</h2>
+          <p className="testitag">{TESTIMONIAL.tag}</p>
+          <h2>{TESTIMONIAL.heading}</h2>
         </div>
 
         <Swiper
@@ -43,7 +44,7 @@ function Testimonail() {
             }
           }}
         >
-          {[...Array(3)].map((_, index) => (
+          {TESTIMONIAL.reviews.map((item, index) => (
             <SwiperSlide key={index}>
               <motion.div
                 className="singletebox"
@@ -54,16 +55,14 @@ function Testimonail() {
               >
                 <img className="starimg" src={star} alt="Star" />
                 <p className="estipara">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Suspendisse varius enim in eros elementum tristique. Duis
-                  cursus, mi quis viverra ornare.
+                {item.review}
                 </p>
 
                 <div className="profildea">
                   <img src={profile} alt="Profile" />
                   <div className="profc">
-                    <p className="namep">Orlando Diggs</p>
-                    <p className="addpre">Position, Company name</p>
+                    <p className="namep">{item.name}</p>
+                    {/* <p className="addpre">Position, Company name</p> */}
                   </div>
                 </div>
               </motion.div>

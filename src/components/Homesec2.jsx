@@ -3,6 +3,7 @@ import Home2swiper from "./Home2swiper";
 import leftbtn from "../assets/leftbtns.png";
 import rightbtn from "../assets/rightbtns.png";
 import { useRef } from "react";
+import { PACKAGE_DATA } from "../Data/Home";
 
 function Homesec2() {
   const swiperRef = useRef(null);
@@ -21,10 +22,10 @@ function Homesec2() {
 
         <div className="hs2top">
           <div className="cantafort">
-            <span>Can't afford to overpay? </span>
+            <span>{PACKAGE_DATA.tag}</span>
           </div>
           <h2>
-           Travel smart with transparent pricing
+          {PACKAGE_DATA.heading}
           </h2>
         </div>
 

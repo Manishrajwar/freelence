@@ -6,8 +6,8 @@ import "swiper/css/navigation"; // Import navigation styles
 import { Navigation } from "swiper/modules";
 import left from "../assets/leftbtns.png";
 import right from "../assets/rightbtns.png";
-import img1 from "../assets/unsplash_S9xHSYaLmUo.png";
 import clock from "../assets/clock.png";
+import { TOP_PACKAGES } from "../Data/Home";
 
 function Homesec5() {
   const swiperRef = useRef(null); // Create a reference for the Swiper instance
@@ -27,13 +27,14 @@ function Homesec5() {
   return (
     <div className="hsec5wrap">
       <div className="hsec5cont">
-        <h2>Browse Our Top Packages</h2>
+        <h2>{TOP_PACKAGES.heading}</h2>
 
         <div className="brwseritems">
           <img src={left} alt="left" onClick={handlePrevClick} className="bwseritembtn" style={{ cursor: 'pointer' }} />
 
           <Swiper
             rewind={true}
+            loop={true}
             modules={[Navigation]}
             className="mySwiper2"
             slidesPerView={3}
@@ -51,106 +52,35 @@ function Homesec5() {
               }
             }}
           >
-            <SwiperSlide>
-              <div className="sec5Item">
-                <img src={img1} alt="img" className="sec5img" />
-
-                <div className="s5conteent">
-                  <div className="s5itemclock">
-                    <img src={clock} alt="" />
-                    <span>6 Days & Nights</span>
+            {
+              TOP_PACKAGES.sliderData.map((item ,index)=>(
+                <SwiperSlide>
+                <div key={index} className="sec5Item">
+                  <img src={item.img} alt="img" className="sec5img" />
+  
+                  <div className="s5conteent">
+                    <div className="s5itemclock">
+                      <img src={clock} alt="" />
+                      <span>{item.dayNight}</span>
+                    </div>
+  
+                    <p className="s5imepara">
+                     {item.title}
+                    </p>
+  
+                    <div className="s5itemprice">
+                      {item.price} <span>/person</span>
+                    </div>
                   </div>
-
-                  <p className="s5imepara">
-                    Learn modern architecture Online course
-                  </p>
-
-                  <div className="s5itemprice">
-                    $1000 <span>/person</span>
-                  </div>
+  
+                  <button className="checkdetabtns1">
+                    <span>CHECK DETAILS</span>
+                  </button>
                 </div>
-
-                <button className="checkdetabtns1">
-                  <span>CHECK DETAILS</span>
-                </button>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="sec5Item">
-                <img src={img1} alt="img" className="sec5img" />
-
-                <div className="s5conteent">
-                  <div className="s5itemclock">
-                    <img src={clock} alt="" />
-                    <span>6 Days & Nights</span>
-                  </div>
-
-                  <p className="s5imepara">
-                    Learn modern architecture Online course
-                  </p>
-
-                  <div className="s5itemprice">
-                    $1000 <span>/person</span>
-                  </div>
-                </div>
-
-                <button className="checkdetabtns1">
-                  <span>CHECK DETAILS</span>
-                </button>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="sec5Item">
-                <img src={img1} alt="img" className="sec5img" />
-
-                <div className="s5conteent">
-                  <div className="s5itemclock">
-                    <img src={clock} alt="" />
-                    <span>6 Days & Nights</span>
-                  </div>
-
-                  <p className="s5imepara">
-                    Learn modern architecture Online course
-                  </p>
-
-                  <div className="s5itemprice">
-                    $1000 <span>/person</span>
-                  </div>
-                </div>
-
-                <button className="checkdetabtns1">
-                  <span>CHECK DETAILS</span>
-                </button>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="sec5Item">
-                <img src={img1} alt="img" className="sec5img" />
-
-                <div className="s5conteent">
-                  <div className="s5itemclock">
-                    <img src={clock} alt="" />
-                    <span>6 Days & Nights</span>
-                  </div>
-
-                  <p className="s5imepara">
-                    Learn modern architecture Online course
-                  </p>
-
-                  <div className="s5itemprice">
-                    $1000 <span>/person</span>
-                  </div>
-                </div>
-
-                <button className="checkdetabtns1">
-                  <span>CHECK DETAILS</span>
-                </button>
-              </div>
-            </SwiperSlide>
-
+              </SwiperSlide>
+              ))
+            }
+         
           </Swiper>
 
           <img src={right} alt="right" onClick={handleNextClick} className="bwseritembtn" style={{ cursor: 'pointer' }} />

@@ -1,22 +1,19 @@
 import React from 'react';
 import "./home.css";
-import frame from '../assets/Frame.png';
-import frame1 from '../assets/Frame2.png';
-import frame2 from '../assets/Frame3.png';
-import frame3 from '../assets/Frame4.png';
-import frame4 from '../assets/Frame5.png';
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import TopDestiSwiper from "../components/topDestiSwiper"
+import { TOP_DESTINATIONS } from '../Data/Home';
 
 function Homesec4() {
   return (
     <div className='hsec4wrap'>
 
       <motion.div className="hsec4cont">
-        <h2>Top Destination</h2>
+        <h2>Top Destinations</h2>
 
         <div className="sec4image">
+
           {/* First Section */}
           <div className="sec4sec1">
             <motion.img
@@ -29,7 +26,7 @@ function Homesec4() {
                 opacity: { duration: 0.5 },
                 duration: 1.5,
               }}
-              src={frame}
+              src={TOP_DESTINATIONS.image1}
               alt=""
             />
             <motion.img
@@ -42,7 +39,7 @@ function Homesec4() {
                 opacity: { duration: 0.5 },
                 duration: 1.5,
               }}
-              src={frame1}
+              src={TOP_DESTINATIONS.image2}
               alt=""
             />
           </div>
@@ -58,7 +55,7 @@ function Homesec4() {
                 opacity: { duration: 0.5 },
                 duration: 1.5,
               }}
-              src={frame2}
+              src={TOP_DESTINATIONS.image3}
               alt=""
             />
             <motion.img
@@ -71,7 +68,7 @@ function Homesec4() {
                 opacity: { duration: 0.5 },
                 duration: 1.5,
               }}
-              src={frame3}
+              src={TOP_DESTINATIONS.image4}
               alt=""
             />
             <motion.img
@@ -84,7 +81,7 @@ function Homesec4() {
                 opacity: { duration: 0.5 },
                 duration: 1.5,
               }}
-              src={frame4}
+              src={TOP_DESTINATIONS.image5}
               alt=""
             />
           </div>
@@ -95,13 +92,11 @@ function Homesec4() {
 
         </div>
 
-
          <div className='TopDestiSwiper'>
 
         <TopDestiSwiper />
 
          </div>
-
 
       </motion.div>
 

@@ -6,6 +6,7 @@ import "./component.css"
 import 'swiper/css';
 import 'swiper/css/navigation'; // Import navigation styles
 import { Navigation } from 'swiper/modules';
+import { PACKAGE_DATA } from '../Data/Home';
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 
 const Home2swiper = forwardRef((props, ref) => {
@@ -23,6 +24,7 @@ const Home2swiper = forwardRef((props, ref) => {
       slidesPerView={2}
       spaceBetween={20}
       ref={swiperRef}
+      loop={true}
 
       breakpoints={{
         1160: {
@@ -33,70 +35,33 @@ const Home2swiper = forwardRef((props, ref) => {
         }
       }}
     >
-      <SwiperSlide>
-        <div className="singswipe">
-          <img src={swipbg} alt="Background" className="swipbg" />
-          <p className="bestsellertag">
-            <span>Best seller</span>
-          </p>
-          <div className="swimidCont">
-            <div className="swmidcleft">
-              <h3>See the best of Paris, Nice and Marseille</h3>
-              <img src={texticon} alt="Text Icon" />
-            </div>
-            <p>
-              <img src={icon} alt="Icon" /> <span>6 Nights, 7 days</span>
-            </p>
-          </div>
-          <button className="checkdbtns">
-            <span>CHECK DETAILS</span>
-          </button>
 
-        </div>
-      </SwiperSlide>
-
-      <SwiperSlide>
-        <div className="singswipe">
-          <img src={swipbg} alt="Background" className="swipbg" />
-          <p className="bestsellertag">
-            <span>Best seller</span>
-          </p>
-          <div className="swimidCont">
-            <div className="swmidcleft">
-              <h3>See the best of Paris, Nice and Marseille</h3>
-              <img src={texticon} alt="Text Icon" />
-            </div>
-            <p>
-              <img src={icon} alt="Icon" /> <span>6 Nights, 7 days</span>
+      {
+        PACKAGE_DATA.sliderDetails.map((item , index)=>(
+          <SwiperSlide>
+          <div className="singswipe">
+            <img src={item.img} alt="Background" className="swipbg" />
+            <p className="bestsellertag">
+              <span>Best seller</span>
             </p>
-          </div>
-          <button className="checkdbtns">
-            <span>CHECK DETAILS</span>
-          </button>
-        </div>
-      </SwiperSlide>
-      
-      <SwiperSlide>
-        <div className="singswipe">
-          <img src={swipbg} alt="Background" className="swipbg" />
-          <p className="bestsellertag">
-            <span>Best seller</span>
-          </p>
-          <div className="swimidCont">
-            <div className="swmidcleft">
-              <h3>See the best of Paris, Nice and Marseille</h3>
-              <img src={texticon} alt="Text Icon" />
+            <div className="swimidCont">
+              <div className="swmidcleft">
+                <h3>{item.title}</h3>
+                <img src={texticon} alt="Text Icon" />
+              </div>
+              <p>
+                <img src={icon} alt="Icon" /> <span>{item.daysNight}</span>
+              </p>
             </div>
-            <p>
-              <img src={icon} alt="Icon" /> <span>6 Nights, 7 days</span>
-            </p>
+            <button className="checkdbtns">
+              <span>CHECK DETAILS</span>
+            </button>
+  
           </div>
-          <button className="checkdbtns">
-            <span>CHECK DETAILS</span>
-          </button>
-        </div>
-      </SwiperSlide>
-
+        </SwiperSlide>
+        ))
+      }
+    
     </Swiper>
   );
 });

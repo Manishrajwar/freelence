@@ -166,7 +166,9 @@ margin: 75px 0px;
     align-items: center;
 }
 .testtop p{
-    width: 182px;
+    
+    width: fit-content;
+    padding: 10px 20px;
     height: 32px;
     border-radius: 24px ;
     background: #000000;
@@ -189,8 +191,8 @@ color: #202939;
 
 .singletebox{
     max-width: 381px;
-/* height: 335px; */
-height: fit-content;
+    height: 335px;
+    justify-content: space-between;
 border-radius: 16px ;
 border: 1px solid #EEF2F6;
 background: #FFFFFF;
