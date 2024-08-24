@@ -1,51 +1,78 @@
-import React from 'react'
-import "./navbar.css"
+import React, { useState } from "react";
+import "./navbar.css";
 import logo from "../assets/logo.png";
-import smallnav from "../assets/smallnav.png"
+import { IoReorderThreeSharp } from "react-icons/io5";
+import { ImCross } from "react-icons/im";
+import {motion} from "framer-motion"
 
 
 const data = ["Places", "About", "Blog", "Contact", ""];
 
-
 function Navbar2() {
+
+  const [opensidebar, setOpensidebar] = useState(false);
+
+
   return (
     <div>
 
-        {/* tag one  */}
-        <div className="saletagwrap">
+      {/* tag one  */}
+      <div className="saletagwrap">
+        <p>SALE INFO</p>
+      </div>
 
-            <p>SALE INFO</p>
+
+      <div className="navbar2wrap">
+
+        <div className="navbarCont2">
+          {/* left logo  */}
+          <img src={logo} alt="" />
+
+          {/* nav items */}
+          <ul className="navitems2">
+            {data.map((d, index) =>
+              index <= 3 ? (
+                <li key={index}>{d}</li>
+              ) : (
+                <button className="navbutton2">
+                  <span>Take a Trip </span>
+                </button>
+              )
+            )}
+          </ul>
+
+        
+<IoReorderThreeSharp onClick={()=>setOpensidebar(true)} className="IoReorderThreeSharp"  />
+
 
         </div>
 
-        <div className="navbar2wrap">
 
-            <div className="navbarCont2">
+      </div>
 
-                 {/* left logo  */}
-        <img src={logo} alt="" />
-
-{/* nav items */}
-<ul className="navitems2">
-  {data.map((d, index) =>
-    index <= 3 ? (
-      <li key={index}>{d}</li>
-    ) : (
-      <button className="navbutton2">
-        <span>Take a Trip </span>
-      </button>
-    )
-  )}
-</ul>
-
-  <img src={smallnav} loading="lazy" alt="smallnav" className="smallnav" />
+      <motion.div
+            className={`slidebarslidecont ${opensidebar ? 'open' : ''}`}
+            initial={{ x: '100%' }} // Initial position off-screen
+            animate={{ x: opensidebar ? 0 : '100%' }} // Slide in/out based on state
+            transition={{ duration: 0.3 }} // Smooth transition
+        >
+            <div className="cross22">
+                {/* <img onClick={() => setOpensidebar(false)} src={cross22} alt="Close" /> */}
+                <ImCross fontSize={40} color="white" onClick={() => setOpensidebar(false)} />
 
             </div>
+            <div className="allnavitems">
+                {data.map((item, index) => (
+                    <p key={index} className="sinnav">
+                        {item}
+                    </p>
+                ))}
+            </div>
+        </motion.div>
 
-        </div>
-
+      
     </div>
-  )
+  );
 }
 
-export default Navbar2
+export default Navbar2;

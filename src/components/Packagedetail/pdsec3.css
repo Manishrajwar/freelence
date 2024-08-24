@@ -21,6 +21,7 @@ border-image-slice: 1;
 .pdsec3top h3{
     font-family: Grey Qo;
     font-size: 96px;
+    min-width: 327px;
     font-weight: 400;
     line-height: 20px;
 color: #008753;    
@@ -122,6 +123,9 @@ margin-top: 20px;
 
 .singli {
     margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
 }
 
 .viewgustdiv {
@@ -217,4 +221,23 @@ margin-top: 20px;
 
 .viewgustdiv:hover {
     color: #ff7f00;
+}
+
+@media (max-width:550px) {
+    .singlediv .headingdiv p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .pdsecdtalines li{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width:480px) {
+    .pdsec3top h3{
+       font-size: 50px;
+       min-width: 170px;
+    }
+   
 }

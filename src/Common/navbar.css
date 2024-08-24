@@ -22,6 +22,8 @@ color: #FFFFFF;
     position: relative;
 }
 
+
+
 .navbarCont2{
         max-width: 1400px;
         width: 100%;
@@ -62,4 +64,18 @@ border: 2px solid #112F38;
     line-height: 19.36px;
     text-align: left;
 color: #112F38;    
+}
+
+.IoReorderThreeSharp{
+    display: none;
+}
+
+@media (max-width:750px) {
+    .IoReorderThreeSharp{
+        display: flex;
+        font-size: 50px;
+    }
+    .navitems2{
+        display: none;
+    }
 }

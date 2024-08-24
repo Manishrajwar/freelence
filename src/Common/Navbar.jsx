@@ -42,6 +42,9 @@ function Navbar() {
 
     </nav>
 
+
+    
+
     <motion.div
             className={`slidebarslidecont ${opensidebar ? 'open' : ''}`}
             initial={{ x: '100%' }} // Initial position off-screen

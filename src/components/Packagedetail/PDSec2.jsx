@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import "./pd.css";
 import starts from "../../assets/startss.png";
-import pdimg3 from  "../../assets/pdimg3.png"
-import rec92 from "../../assets/Rectangle 1922.png"
-import rec90 from "../../assets/Rectangle 1920.png"
-import copy1 from "../../assets/detailcopy1.png"
-import copy2 from "../../assets/detailcopy2.png"
-import copy3 from "../../assets/detailcopy3.png"
-import copy4 from "../../assets/detailcopy4.png"
-import copy5 from "../../assets/detailcopy5.png"
-import copy6 from "../../assets/detailcopy6.png"
+import { motion } from "framer-motion";
+import { LEFTSIDECONTENT1, RIGHTSIDECONTENT1, RIGHTSIDECONTENT2 } from "../../Data/PackageDetail";
+import { IoIosArrowDown } from "react-icons/io";
 
-const data = [ "ITINERARY" , "SUMMARISED VIEW"]
+const data = ["ITINERARY", "SUMMARISED VIEW"];
 
 function PDSec2() {
+  const [togleBtn, setTogleBtns] = useState(0);
 
-    
- const [togleBtn , setTogleBtns] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleDetails = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
 
@@ -24,230 +22,185 @@ function PDSec2() {
 
       {/* left side */}
       <div className="pdSec2left">
+         
+         <div className="daynigratingwrap">
+                 <span className="dnihsamlle"> {LEFTSIDECONTENT1.totaldays} Days , {LEFTSIDECONTENT1.totaldays} Nights</span>
+                 <span className="ratintotal"> <img src={starts} alt="" /> <span>{RIGHTSIDECONTENT1.rating}</span> ({RIGHTSIDECONTENT1.totalrating})</span>
+         </div>
 
-        <h2>Create the Chapters of Love in the Andamans</h2>
+        <h2>{LEFTSIDECONTENT1.heading}</h2>
 
         <div className="pds22leftop">
-          <p className="pdsltf">6D/5N</p>
+          <p className="pdsltf mt-2">
+            {LEFTSIDECONTENT1.totaldays}D/{LEFTSIDECONTENT1.totaldays}N
+          </p>
 
           <div className="pdltse">
-            <div className="pdflsfir">
-              <span>1</span>
-              <div>
-                <p>Day in</p>
-                <p>Portblair</p>
+
+            {LEFTSIDECONTENT1.dayin.map((item, index) => (
+              <div className="flex items-center gap-[17px]">
+                <div key={index} className="pdflsfir">
+                  <span>{item.daynum}</span>
+                  <div>
+                    <p>Day in</p>
+                    <p>{item.destiny}</p>
+                  </div>
+                </div>
+
+                {LEFTSIDECONTENT1.dayin.length !== index + 1 && (
+                  <p className="verline"></p>
+                )}
               </div>
-            </div>
+            ))}
 
-            <p className="verline"></p>
-
-            <div className="pdflsfir">
-              <span>1</span>
-              <div>
-                <p>Day in</p>
-                <p>Portblair</p>
-              </div>
-            </div>
-
-            <p className="verline"></p>
-
-            <div className="pdflsfir">
-              <span>1</span>
-              <div>
-                <p>Day in</p>
-                <p>Portblair</p>
-              </div>
-            </div>
           </div>
 
         </div>
 
         <p className="line2"></p>
 
-        <p className="line2 addmargintop"></p>
+        {/* INCLUDED SECTION  */}
+        <div className="includedSec">
+          {LEFTSIDECONTENT1.includedSection.map((item, index) => (
+            <div className="sinincluddiv">
+              <img src={item.img} alt="" />
+              <span>{item.title}</span>
+            </div>
+          ))}
+        </div>
 
+        <p className="line2"></p>
 
         <div className="triphigh">
-          <h3>Trip Highlights</h3>
+          <h3>{LEFTSIDECONTENT1.tripHighlightsHeading}</h3>
 
           <ul>
-            <li>
-              Gear up for exciting sea kart and water-scooter rides that promise
-              a thrilling adventure in Andaman.
-            </li>
-            <li>
-              Gear up for exciting sea kart and water-scooter rides that promise
-              a thrilling adventure in Andaman.
-            </li>
-            <li>
-              Gear up for exciting sea kart and water-scooter rides that promise
-              a thrilling adventure in Andaman.
-            </li>
-            <li>
-              Gear up for exciting sea kart and water-scooter rides that promise
-              a thrilling adventure in Andaman.
-            </li>
+            {LEFTSIDECONTENT1.tripHightlight.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
         </div>
 
-         <div className="toogleBtns">
+        <div className="toogleBtns">
+          {data?.map((d, index) => (
+            <button
+              onClick={() => setTogleBtns(index)}
+              className={`samebtnproepty ${
+                index === togleBtn && "curtoglebtn"
+              }`}
+              key={index}
+            >
+              <span>{d}</span>
+            </button>
+          ))}
+        </div>
 
-            {
-                data?.map((d , index)=>(
-                    <button onClick={()=>setTogleBtns(index)} className={`samebtnproepty ${index === togleBtn && "curtoglebtn"}`} key={index}><span>{d}</span></button>
-                ))
-            }
+        <div className="destinydetailssec">
 
-         </div>
+          {LEFTSIDECONTENT1.destinyDetails.map((item, index) => (
 
-         <img src={pdimg3} alt="" className="pdimg3" />
+            <div key={index} className="singldesity">
 
-         <div className="arivepotalDiv">
+              <img src={item.img} alt="" className="pdimg3" />
 
-            <nav>
-                <p className="daytag">Day 1</p>
-                <p className="arivtext"> Arrival in Portblair</p>
-                <p className="lineh2"></p>
-                <p className="totalcost">Total Cost : $10</p>
-            </nav>
+              <div className="arivepotalDiv">
 
-            <hr />
+                <div className="flex items-center justify-between cursor-pointer" onClick={() => toggleDetails(index)} >
+                
+                  <nav>
+                    <p className="daytag">Day {item.daynum}</p>
+                    <p className="arivtext"> {item.title}</p>
+                    <p className="lineh2"></p>
+                    <p className="totalcost">Total Cost : {item.totalCost}</p>
+                  </nav>
 
-            <p className="aftetext">After arrival, you will be transferred to the hotel for check in. Later, you will get transferred to the Corbyn Cove Beach, admire its beautiful shore and palm trees. Next, you will visit the Cellular Jail and enjoy a light show, before getting dropped off at the hotel for an overnight stay.</p>
-
-            <hr />
-
-            <div className="pdsefistsec">
-              <h3>Private Transport</h3>
-              <h4>Transfer in Sedan, SUV or similar</h4>
-
-               <label>
-
-              <div className="shadowdiv">
-                <p>Veer Savarkar International Airport </p>
-              </div>
-
-              <p className="fromtag">
-                FROM
-              </p>
-
-               </label>
-
-               <label>
-
-              <div className="shadowdiv">
-                <p>Veer Savarkar International Airport </p>
-              </div>
-
-              <p className="fromtag">
-                TO
-              </p>
-
-               </label>
-
-
-            </div>
-
-          <hr />
-
-          <div className="pdsefistsec">
-              <h3>Stay At</h3>
-              <h4>Transfer in Sedan, SUV or similar</h4>
-
-         
-                <div className="pdsesecondimage">
-
-                     <div className="rowiamges">
-                       <img src={rec90} alt="" />
-                       <img src={rec90} alt="" />
-                     </div>
-
-                     <img src={rec92} className="rec92img" alt="" />
-
+                  <IoIosArrowDown />
+                  
                 </div>
 
+                <motion.div
+                  className={`packdetailInsidesec`}
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: openIndex === index ? "auto" : 0,
+                    opacity: openIndex === index ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  style={{ overflow: "hidden" }}
+                >
+                  <hr className="mt-5" />
+                  <p className="aftetext">{item.description}</p>
+                  <hr />
+                  <div className="pdsefistsec">
+                    <h3>{item.transportType} Transport</h3>
+                    <h4>{item.tranportIn}</h4>
+                    <label>
+                      <div className="shadowdiv">
+                        <p>{item.From} </p>
+                      </div>
+                      <p className="fromtag">FROM</p>
+                    </label>
+                    <label>
+                      <div className="shadowdiv">
+                        <p>{item.to} </p>
+                      </div>
+                      <p className="fromtag">TO</p>
+                    </label>
+                  </div>
 
+                  <hr />
+
+                  <div className="pdsefistsec">
+                    <h3>Stay At</h3>
+                    <h4>{item.stayAt}</h4>
+                    <div className="pdsesecondimage">
+                      <div className="rowiamges">
+                        <img src={item.stayImg1} alt="" />
+                        <img src={item.stayImg2} alt="" />
+                      </div>
+                      <img src={item.stayImg3} className="rec92img" alt="" />
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div className="pdsefistsec">
+                    <h3>Activity</h3>
+                    <h4>{item.activityHeading}</h4>
+                    <img
+                      src={item.activityImage}
+                      className="detailcopy1"
+                      alt=""
+                    />
+                  </div>
+                </motion.div>
+
+              </div>
             </div>
-
-            <hr />
-
-            <div className="pdsefistsec">
-              <h3>Activity</h3>
-              <h4>Day Trip to Corbyn Cove Beach and Cellular Jail on a Private basis</h4>
-
-         
-               <img src={copy1} className="detailcopy1" alt="" />
-
-            </div>
-
-         </div>
-
-         <img src={copy2} alt="" className="detailcopy1" />
-
-         <div className="arvidiv">
-          <p className="daytag">Day 2</p>
-          <h3>Arrival in Portblair</h3>
-          <p className="linevert"></p>
-          <p className="totacost">Total Cost : $10</p>
-         </div>
-
-         <img src={copy3} alt="" className="detailcopy1" />
-
-         <div className="arvidiv">
-          <p className="daytag">Day 3</p>
-          <h3>Arrival in Portblair</h3>
-          <p className="linevert"></p>
-          <p className="totacost">Total Cost : $10</p>
-         </div>
-
-         <img src={copy4} alt="" className="detailcopy1" />
-
-         <div className="arvidiv">
-          <p className="daytag">Day 4</p>
-          <h3>Arrival in Portblair</h3>
-          <p className="linevert"></p>
-          <p className="totacost">Total Cost : $10</p>
-         </div>
-
-         <img src={copy5} alt="" className="detailcopy1" />
-
-         <div className="arvidiv">
-          <p className="daytag">Day 5</p>
-          <h3>Arrival in Portblair</h3>
-          <p className="linevert"></p>
-          <p className="totacost">Total Cost : $10</p>
-         </div>
-         <img src={copy6} alt="" className="detailcopy1" />
-
-         <div className="arvidiv">
-          <p className="daytag">Day 6</p>
-          <h3>Arrival in Portblair</h3>
-          <p className="linevert"></p>
-          <p className="totacost">Total Cost : $10</p>
-         </div>
+          ))}
+        </div>
 
       </div>
 
       {/* right side  */}
       <div className="pdSec2Right">
-
         <div className="sec2ritop">
           <div className="s2ttop">
             {/* left  */}
 
             <div className="pds2left">
               <p className="pdlepar1">
-                INR <p>20000</p> <span>per person</span>{" "}
+                INR <p>{RIGHTSIDECONTENT1.amount}</p> <span>per person</span>{" "}
               </p>
               <p className="pdlepar2">
-                INR <span>15000</span>
+                INR <span>{RIGHTSIDECONTENT1.cutAmount}</span>
               </p>
             </div>
 
             <div className="pds2topright">
               <img src={starts} alt="" />
-              <span>4.5</span>
-              <span>(1k)</span>
+              <span>{RIGHTSIDECONTENT1.rating}</span>
+              <span>({RIGHTSIDECONTENT1.totalrating})</span>
             </div>
           </div>
 
@@ -259,7 +212,7 @@ function PDSec2() {
         </div>
 
         <div className="formdetail">
-          <h3>Create the Chapters of Love in the Andamans INR 19,800</h3>
+          <h3>{RIGHTSIDECONTENT2.heading}</h3>
 
           <form>
             <label>
@@ -310,10 +263,7 @@ function PDSec2() {
             </button>
           </form>
         </div>
-
       </div>
-
-      
 
     </div>
   );

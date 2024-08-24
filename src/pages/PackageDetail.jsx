@@ -6,6 +6,7 @@ import PDSec2 from '../components/Packagedetail/PDSec2'
 import PDSec3 from '../components/Packagedetail/PDSec3'
 import Homesec5 from '../components/Homesec5'
 import PDSec5 from '../components/Packagedetail/PDSec5'
+import PdSec1Animation from '../components/Packagedetail/PdSec1Animation'
 
 
 function PackageDetail() {
@@ -16,7 +17,10 @@ function PackageDetail() {
 
       <div className="pacakageWrapCont">
 
+
         <PDSec1  />
+
+        <PdSec1Animation />
 
         <PDSec2 />
 
