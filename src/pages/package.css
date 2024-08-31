@@ -1,3 +1,15 @@
+
+.packagcont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 20px;
+    max-width: 1440px;
+     width: 100%;
+     padding: 10px 18px;
+    margin: 130px auto 40px auto;
+}
+
 .hse2wrap{
     padding: 20px 0px;
     width: 100%;
@@ -41,14 +53,14 @@
 color: #FFFFFF;    
 }
 
-.suubtitle{
+.suubtitle2{
     font-family: Inter;
-    font-size: 18px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     font-weight: 500;
-    padding-left: 40px;
-    line-height: 44px;
+    padding-left: 20px;
+    line-height: 24px;
 color: black;    
 }
 .hs2top h2{
@@ -60,16 +72,16 @@ text-align: center;
 color: #000000;
 }
 
-.singswipe{
-    max-width: 584.5px;
+.singswipe2{
+    max-width: 400px;
     width: 100%;
-    height: 494px;
+    height: 434px;
     border-radius: 20px ;
     box-shadow: 0px 3px 20px 0px #00000014;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     position: relative;
     justify-content: space-between;
     margin: 0 auto;
@@ -103,39 +115,41 @@ justify-content: center;
 color: #FFFFFF;    
 }
 
-.swimidCont{
+.swimidCont2{
     padding: 0px 32px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 10px;
 }
-.swimidCont .swmidcleft{
+ .swmidcleft2{
  display: flex;
  flex-direction: column;
  gap: 16px;
 }
-.swimidCont .swmidcleft h3{
+ .swmidcleft2 h3{
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     max-width: 254px;
     font-weight: 600;
     line-height: 24.2px;
     text-align: left;
+    max-width: 80%;
 color: #000000;    
 }
-.swimidCont .swmidcleft img{
+ .swmidcleft2 img{
 width: 186px;
 }
 
-.swimidCont p{
+.swimidCont2 p{
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    width:200px;
 }
-.swimidCont p span{
+.swimidCont2 p span{
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 19.36px;
 color: #000000;    
@@ -148,7 +162,7 @@ color: #000000;
 }
 
 .checkdbtns{
-    max-width: 510px;
+    max-width: 90%;
     width: 100%;
 height: 51px;
 border-radius: 7px ;
@@ -191,12 +205,12 @@ color: #000000;
     z-index: 10;
   }
 
-  .perperontext{
+  .perperontext2{
     font-family: Poppins;
-font-size: 22px;
+font-size: 14px;
 font-weight: 600;
 padding: 0px 10px;
-line-height: 42px;
+line-height: 26px;
 text-align: left;
 color: #000000;
   }
@@ -210,20 +224,56 @@ color: #969494;
   }
   
 
+  .titlenigh{
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+ 
+
+  .icondaygin{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+
+  }
+  .icondaygin span{
+    font-size: 12px;
+    line-height: 22px;
+    font-family: Inter;
+font-weight: 600;
+color: #000000;
+
+  }
+
+  .titlenigh h3{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Inter;
+font-weight: 600;
+color: #000000;
+width: 60%;
+  }
+
   @media (max-width:1340px) {
-    .singswipe{
-        max-width: 500px;
-        height: 444px;
+    .singswipe2{
+        /* max-width: 460px;
+        height: 444px; */
     }
     .checkdbtns{
        width: 90%;
     }
   }
   @media (max-width:1160px) {
-    .singswipe{
-        max-width: 560px;
+    /* .singswipe2{
+        max-width: 540px;
         height: 474px;
-    }
+    } */
     .checkdbtns{
        width: 90%;
     }
@@ -246,8 +296,8 @@ color: #969494;
     }
 }
   @media (max-width:750px) {
-    .singswipe{
-        max-width: 560px;
+    .singswipe2{
+        max-width: 540px;
         height: fit-content;
         padding-bottom: 24px;
     }
@@ -278,15 +328,15 @@ color: #969494;
     font-size: 20px;
     line-height: 32px;
     }
-    .swimidCont .swmidcleft h3{
-        font-size: 18px;
+ .swmidcleft2 h3{
+        font-size: 14px;
     }
     
    
   }
 
   @media (max-width:500px) {
-    .swimidCont{
+    .swimidCont2{
         display: flex;
         flex-direction: column-reverse;
     }

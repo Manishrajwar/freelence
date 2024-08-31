@@ -16,10 +16,15 @@
 color: #FFFFFF;    
 }
 
+
 .navbar2wrap{
     width: 100%;
     background-color: white;
-    position: relative;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    
 }
 
 
@@ -38,7 +43,7 @@ color: #FFFFFF;
 .navitems2{
     display: flex;
     align-items: center;
-    max-width: 565px;
+    max-width: 600px;
     width: 100%;
 justify-content: space-between;
 }
@@ -69,6 +74,15 @@ color: #112F38;
 .IoReorderThreeSharp{
     display: none;
 }
+
+.navbar2wrap.scrolled {
+    background-color: white;
+    padding: 14px 18px;
+    z-index: 1000;
+  }
+  .navbar2wrap.scrolled .navbarCont2 {
+    padding: 0px 18px;
+  }
 
 @media (max-width:750px) {
     .IoReorderThreeSharp{

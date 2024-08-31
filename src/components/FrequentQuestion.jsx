@@ -39,7 +39,7 @@ function FrequentQuestion() {
           ))}
         </div>
 
-        <button className="loadmorebtn"><span>Load more FAQs</span></button>
+        {/* <button className="loadmorebtn"><span>Load more FAQs</span></button> */}
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import clock from "../assets/clock.png";
 import { TOP_PACKAGES } from "../Data/Home";
 import { useNavigate } from "react-router-dom";
 
-function Homesec5() {
+function PackageSec5() {
   const swiperRef = useRef(null); // Create a reference for the Swiper instance
 
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ function Homesec5() {
   return (
     <div className="hsec5wrap">
       <div className="hsec5cont">
-        <h2>Top Andaman Tour Packages</h2>
+        <h2>{TOP_PACKAGES.heading}</h2>
 
         <div className="brwseritems">
           <img src={left} alt="left" onClick={handlePrevClick} className="bwseritembtn" style={{ cursor: 'pointer' }} />
@@ -73,10 +73,9 @@ function Homesec5() {
   
                   </div>
   
-                 <a href={`/packageDetail/${item.id}`}> <button className="checkdetabtns1">
+                  <button  className="checkdetabtns1">
                     <span>CHECK DETAILS</span>
                   </button>
-                  </a>
                 </div>
               </SwiperSlide>
               ))
@@ -92,4 +91,4 @@ function Homesec5() {
   );
 }
 
-export default Homesec5;
+export default PackageSec5;

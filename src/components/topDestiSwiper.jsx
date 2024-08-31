@@ -4,6 +4,7 @@ import "./styles.css";
 import "swiper/css/navigation"; // Import navigation styles
 import { Navigation } from "swiper/modules";
 import smallTop from "../assets/topdesti1.png"
+import { TOP_DESTINATIONS2 } from "../Data/Home";
 
 const topDestiSwiper = () => {
 
@@ -23,24 +24,19 @@ const topDestiSwiper = () => {
         },
       }}
     >
-      <SwiperSlide>
+      {
+        TOP_DESTINATIONS2.map((item , index)=>(
+      <SwiperSlide key={index}>
         <div className="singleTopdesti">
-             <img src={smallTop} alt="" />
-             <p className="destiname">France - 5 days in  Paris, Nice</p>
+             <img src={item.image} alt="" />
+             <p className="destiname">{item.title}</p>
         </div>
       </SwiperSlide>
-      <SwiperSlide>
-        <div className="singleTopdesti">
-             <img src={smallTop} alt="" />
-             <p className="destiname">France - 5 days in  Paris, Nice</p>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <div className="singleTopdesti">
-             <img src={smallTop} alt="" />
-             <p className="destiname">France - 5 days in  Paris, Nice</p>
-        </div>
-      </SwiperSlide>
+
+        ))
+      }
+    
+    
 
     
     </Swiper>

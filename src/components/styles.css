@@ -108,12 +108,13 @@ color: #2B2B3D;
     max-width: 364px;
     margin: 0 auto;
     width: 100%;
-height: 450px;
-background: #FFFFFF;
+    height: 450px;
+    background: #FFFFFF;
 border: 1px solid #E3E3E3;
 padding: 16px;
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 gap: 18px;
 border-radius: 12px;
 
@@ -294,6 +295,10 @@ color: #000000;
         font-size: 24px;
           
     }
+    .singleTopdesti img{
+       
+        height: 420px !important;
+    }
     .s3bancontent p{
         font-family: Poppins;
         font-size: 16px;
@@ -322,14 +327,13 @@ color: #000000;
     .singleTopdesti{
         position: relative;
         max-width: 70vh;
-        /* max-height: 200px; */
         margin: 0 auto;
 
     }
     .singleTopdesti img{
         border-radius: 20px;
         width: 100%;
-        height: 90%;
+        height: 550px;
     }
     .destiname{
         position: absolute;

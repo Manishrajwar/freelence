@@ -164,7 +164,7 @@ export const RIGHTSIDECONTENT1 = {
 
     // CLASSNAME (formdetail)
     export const RIGHTSIDECONTENT2 = {
-        heading:"Create the Chapters of Love in the Andamans INR 19,800"
+        heading:"Create the Chapters of Love in the Andamans INR"
     }
 
     // ***************** RIGHT SIDE CONTENT END *************

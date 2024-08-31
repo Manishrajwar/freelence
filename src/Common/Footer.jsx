@@ -3,6 +3,15 @@ import "./common.css";
 
 
 function Footer() {
+
+
+  const phoneNumber = '8900913929'; // Replace with the phone number
+
+  const handleClick = () => {
+    const whatsappUrl = `https://wa.me/${phoneNumber}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <footer className="footerwrap">
       <div className="footecont">
@@ -14,12 +23,12 @@ function Footer() {
 
             <label>
               <h3>Call Us</h3>
-              <p>+91 XXXXXXXXXX</p>
+              <p>+91 8900913929</p>
             </label>
 
             <label>
               <h3>Email</h3>
-              <p>abctourism@gmail.com</p>
+              <p>mavenandaman@gmail.com</p>
             </label>
           </div>
 
@@ -35,14 +44,14 @@ function Footer() {
 
           <div className="fotsec1">
             <label>
-              <h3>Support</h3>
-              <p>Customer Support</p>
-              <p>Privacy & policy</p>
-              <p>Contact Channels</p>
+              <h3>Social Media</h3>
+              <a href="https://www.instagram.com/mavenandaman/"><p>Instagram</p> </a> 
+             <a href="https://www.facebook.com/mavenandaman/"> <p>Facebook</p> </a>
+             <a href="#" onClick={handleClick}>  <p>WhatsApp</p></a>
             </label>
           </div>
 
-          <div className="fotsec1">
+          {/* <div className="fotsec1">
             <label>
               <h3>Pay Safely With Us</h3>
               <p className="adwidth">
@@ -50,7 +59,7 @@ function Footer() {
                 protocol.
               </p>
             </label>
-          </div>
+          </div> */}
 
         </div>
 

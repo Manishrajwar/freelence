@@ -23,11 +23,10 @@ function WaterActivity() {
 
 
         <div className="wateracitems">
-          
 
            {
             WATER_ACTIVITY.sliderData.map((item , index)=>(
-              <motion.img
+              <motion.div  
               key={index}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -39,46 +38,28 @@ function WaterActivity() {
                 ease: "easeIn",
                 duration: 1
               }}
-              src={item.img}
-              alt=""
-            />
+              className='relative waterwrap'
+              >
+
+
+              <motion.img loading='lazy' src={item.img}   alt="wateractivity"/>
+
+               <div className="wateaccont">
+                <p className='watername'>{item.name}</p>
+                <p className='waterddestiny'>{item.destiny}</p>
+               </div>
   
+  </motion.div>
             ))
            }
         
-          {/* <motion.img
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{
-              delay: 0.4,
-              y: { type: "spring", stiffness: 60 },
-              opacity: { duration: 0.2 },
-              ease: "easeIn",
-              duration: 1
-            }}
-            src={card2}
-            alt=""
-          />
-
-          <motion.img
-            initial={{ x: 100, y: 100, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{
-              delay: 0.6,
-              x: { type: "spring", stiffness: 60 },
-              y: { type: "spring", stiffness: 60 },
-              opacity: { duration: 0.2 },
-              ease: "easeIn",
-              duration: 1
-            }}
-            src={card1}
-            alt=""
-          /> */}
+      
         </div>
 
-        <button className='seemorebtn'>
+        {/* <button className='seemorebtn'>
           <span>See more</span> <FaArrowRight />
-        </button>
+        </button> */}
+
       </div>
     </div>
   );

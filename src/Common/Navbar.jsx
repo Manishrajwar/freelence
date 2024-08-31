@@ -1,32 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./common.css";
 import logo from "../assets/logo.png";
 import smallnav from "../assets/smallnav.png"
 import cross22 from "../assets/cross22.png"
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
-const data = ["Places", "About", "Blog", "Contact", ""];
+const data = [
+  {
+    title:"Home" , 
+    link:"/" 
+  } , 
+  {
+    title:"Places" , 
+    link:"/place" 
+  } , 
+  {
+    title:"Packages" , 
+    link:"/packages" 
+  } , 
+  {
+    title:"About" , 
+    link:"/about" , 
+  } , 
+  {
+    title:"Contact" , 
+    link:""
+  } ,
+  {
+    title:"" , 
+    link:""
+  }
+]
 
 function Navbar() {
 
   const [opensidebar, setOpensidebar] = useState(false);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
 
     <>
    
-    <nav className="navbarwrapper">
+    <nav className={`navbarwrapper ${scrolled ? "scrolled" : ""}`}>
 
       <div className="navcont">
 
         {/* left logo  */}
-        <img src={logo} alt="" className="logo" />
+        <NavLink to={"/"}> <img src={logo} alt="logo" className="logo" /> </NavLink>
 
         {/* nav items */}
         <ul className="navitems">
           {data.map((d, index) =>
-            index <= 3 ? (
-              <li key={index}>{d}</li>
+            index <= 4 ? (
+            <NavLink to={d.link}>  <li key={index}>{d.title}</li> </NavLink>
             ) : (
               <button className="navbutton">
                 <span>Take a Trip </span>
@@ -56,9 +99,9 @@ function Navbar() {
             </div>
             <div className="allnavitems">
                 {data.map((item, index) => (
-                    <p key={index} className="sinnav">
-                        {item}
-                    </p>
+                  <NavLink to={item.link}> <p key={index} className="sinnav">
+                        {item.title}
+                    </p> </NavLink> 
                 ))}
             </div>
         </motion.div>

@@ -8,7 +8,6 @@ import Service from '../components/Service'
 import ReadyGoBanner from '../components/ReadyGoBanner'
 import WaterActivity from '../components/WaterActivity'
 import FrequentQuestion from '../components/FrequentQuestion'
-import BlogSection from '../components/BlogSection'
 import Footer from '../Common/Footer'
 import Footer2 from '../Common/Footer2'
 import Testimonail from '../components/Testimonail'
@@ -25,9 +24,9 @@ function HomePage() {
 
    <Homesec4 />
 
-   <Homesec5 />
+   {/* <Homesec5 /> */}
 
-   <Service />
+   {/* <Service /> */}
 
 <ReadyGoBanner />
 
@@ -39,11 +38,13 @@ function HomePage() {
 
 <FrequentQuestion />
 
-<BlogSection />
+{/* <BlogSection /> */}
 
 <Footer />
 
 <Footer2 />
+
+
 
     </div>
   )

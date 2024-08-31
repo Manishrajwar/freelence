@@ -1,12 +1,10 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import icon from "../assets/icon.png";
-import swipbg from "../assets/swipebg.png";
-import texticon from "../assets/Text+icons.png";
 import "./component.css"
 import 'swiper/css';
 import 'swiper/css/navigation'; // Import navigation styles
-import { Navigation } from 'swiper/modules';
-import { PACKAGE_DATA } from '../Data/Home';
+import { Navigation  , Autoplay } from 'swiper/modules';
+import {  TOP_PACKAGES } from '../Data/Home';
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 
 const Home2swiper = forwardRef((props, ref) => {
@@ -19,12 +17,13 @@ const Home2swiper = forwardRef((props, ref) => {
   return (
     <Swiper
       rewind={true}
-      modules={[Navigation]}
+      modules={[Navigation, Autoplay]}
       className="mySwiper"
       slidesPerView={2}
       spaceBetween={20}
       ref={swiperRef}
-      loop={true}
+      loop={true} 
+      autoplay={{ delay: 2000 }}
 
       breakpoints={{
         1160: {
@@ -37,27 +36,37 @@ const Home2swiper = forwardRef((props, ref) => {
     >
 
       {
-        PACKAGE_DATA.sliderDetails.map((item , index)=>(
-          <SwiperSlide>
+        TOP_PACKAGES.map((item , index)=>(
+          <SwiperSlide key={index}>
+
           <div className="singswipe">
+
             <img src={item.img} alt="Background" className="swipbg" />
+
             <p className="bestsellertag">
               <span>Best seller</span>
             </p>
+
             <div className="swimidCont">
               <div className="swmidcleft">
                 <h3>{item.title}</h3>
-                <img src={texticon} alt="Text Icon" />
               </div>
               <p>
-                <img src={icon} alt="Icon" /> <span>{item.daysNight}</span>
+                <img src={icon} alt="Icon" /> <span>{item.dayNight}</span>
               </p>
             </div>
-            <button className="checkdbtns">
+
+             <p className="suubtitle">{item.subtitle} <p className='perperontext'>₹{Math.floor(item?.GrandTotal/item?.numberOfPeople)} <span>/person</span></p></p>
+
+
+            <a href={`/packageDetail/${item.id}`} className="checkdbtns"> <button  className="checkdbtns">
               <span>CHECK DETAILS</span>
             </button>
+
+            </a>
   
           </div>
+
         </SwiperSlide>
         ))
       }
