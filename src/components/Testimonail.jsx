@@ -1,7 +1,7 @@
 import React from "react";
 import "./blog.css"; // Ensure this file includes pagination styling
 import star from "../assets/starts.png";
-import profile from "../assets/profile.png";
+import profile from "../assets/google.jpeg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import Swiper pagination styles
@@ -62,7 +62,6 @@ function Testimonail() {
                   <img src={profile} alt="Profile" />
                   <div className="profc">
                     <p className="namep">{item.name}</p>
-                    {/* <p className="addpre">Position, Company name</p> */}
                   </div>
                 </div>
               </motion.div>

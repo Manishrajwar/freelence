@@ -33,7 +33,7 @@ const data = [
   }
 ]
 
-function Navbar() {
+function Navbar({setOpenform}) {
 
   const [opensidebar, setOpensidebar] = useState(false);
 
@@ -68,13 +68,13 @@ function Navbar() {
         {/* nav items */}
         <ul className="navitems">
           {data.map((d, index) =>
-            index <= 4 ? (
+            // index <= 4 ? (
             <NavLink to={d.link}>  <li key={index}>{d.title}</li> </NavLink>
-            ) : (
-              <button className="navbutton">
-                <span>Take a Trip </span>
-              </button>
-            )
+            // ) : (
+            //   <button onClick={()=>setOpenform(true)} className="navbutton">
+            //     <span>Take a Trip </span>
+            //   </button>
+            // )
           )}
         </ul>
 

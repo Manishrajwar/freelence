@@ -227,6 +227,7 @@ color: #697586;
 .profildea img{
  max-width: 48px;
  max-height: 48px;
+ border-radius: 50%;
 }
 .profildea .profc{
 display: flex;

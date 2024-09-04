@@ -73,13 +73,13 @@ function Navbar2() {
           {/* nav items */}
           <ul className="navitems2">
             {data.map((d, index) =>
-              index <= 4 ? (
+              // index <= 4 ? (
                <NavLink key={index} to={d.link}><li key={index}>{d.title}</li> </NavLink> 
-              ) : (
-                <button key={index} className="navbutton2">
-                  <span>Take a Trip </span>
-                </button>
-              )
+              // ) : (
+              //   <button key={index} className="navbutton2">
+              //     <span>Take a Trip </span>
+              //   </button>
+              // )
             )}
           </ul>
 

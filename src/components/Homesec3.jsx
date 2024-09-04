@@ -6,7 +6,7 @@ import bannerimg from "../assets/bannerimg.png"
 import bannerimgfilter from "../assets/banfiltes3.png"
 import { BANNER_DETAIL } from "../Data/Home";
 
-function Homesec3() {
+function Homesec3({setOpenform}) {
   return (
     <div className="sec3wrap">
 
@@ -26,7 +26,7 @@ function Homesec3() {
             <h3>{BANNER_DETAIL.offerText}</h3>
           </div>
 
-          <button className="booknow">
+          <button onClick={()=>setOpenform(true)} className="booknow">
             <span>Book Now</span>
           </button>
         </div>
@@ -42,7 +42,7 @@ function Homesec3() {
          <div className="s3bancontent">
           <h4>Discover Special Offers!</h4>
           <p>{BANNER_DETAIL.offerText}</p>
-          <button><span>Book Now</span></button>
+          <button onClick={()=>setOpenform(true)}><span>Book Now</span></button>
          </div>
 
        </div>

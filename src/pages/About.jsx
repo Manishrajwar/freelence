@@ -1,9 +1,36 @@
 import Navbar2 from "../Common/Navbar2"
 import "./about.css"
 import img1 from '../assets/Rectangle1.png'
+import { useRef, useState } from "react";
+import { RIGHTSIDECONTENT2 } from "../Data/PackageDetail";
+import { ImCross } from "react-icons/im";
+import emailjs from '@emailjs/browser';
+
 
 
 function About() {
+
+  const [openform , setOpenform ] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_smlm0mi", 'template_h5vec96', form.current, {
+        publicKey: 'T46Q2vlyp0v8VpFSE',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
   return (
     <div className='aboutwrap'>
 
@@ -34,10 +61,90 @@ function About() {
 
             <p className="paraabout">To provide exceptional travel services and custom itineraries that satisfy each traveler’s interests and needs. We work hard to provide seamless planning, knowledgeable direction, and outstanding customer service, assuring a trouble-free experience from start to finish.</p>
 
-            <button className="contcustn"><span>Contact Us</span></button>
+            <button onClick={()=>setOpenform(true)} className="contcustn"><span>Contact Us</span></button>
 
         </div>
 
+
+
+
+        {
+  openform && 
+
+
+<div className="formwrap">
+
+<div className="formconta">
+
+<div className={`formdetail`}>
+          <h3 className='flex items-center justify-between'>
+            {RIGHTSIDECONTENT2.heading}
+            <ImCross onClick={()=>setOpenform(false)} fontSize={26} className='cursor-pointer' />
+          </h3>
+
+          <form ref={form} onSubmit={sendEmail}>
+            <label>
+              <p>
+                Full Name <span>*</span>
+              </p>
+              <input type="text" name='from_name' />
+            </label>
+
+            <label>
+              <p>
+                Email <span>*</span>
+              </p>
+              <input type="email" name='from_email' />
+            </label>
+
+            <div className="dohalf">
+              <input
+                type="number"
+                placeholder="+91"
+                className="phonenumbeint"
+              />
+              <input
+                type="number"
+                placeholder="Your Phone*"
+                className="myphone"
+                  name='from_number'
+              />
+            </div>
+
+            <div className="dohalf">
+              <input
+                type="text"
+                placeholder="Travel Date*"
+                className="Traveldate"
+                name='from_travel'
+              />
+              <input
+                type="text"
+                placeholder="Duration*"
+                className="Duration"
+                name='from_duration'
+              />
+            </div>
+
+            <textarea
+              className="textaremesge"
+              name="message"
+              id=""
+              placeholder="Message..."
+              
+            ></textarea>
+
+            <button className="requeeqebtn">
+              <span>REQUEST ENQUIRY</span>
+            </button>
+          </form>
+        </div>
+  
+</div>
+
+</div>
+
+}
     </div>
   )
 }

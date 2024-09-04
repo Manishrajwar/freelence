@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { LEFTSIDECONTENT1, RIGHTSIDECONTENT2 } from "../../Data/PackageDetail";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import emailjs from '@emailjs/browser';
+
 
 const data = ["ITINERARY", "SUMMARISED VIEW"];
 
-function PDSec2({ packageView, isInView2 }) {
+function PDSec2({ packageView, isInView2  , setOpenform}) {
   const [togleBtn, setTogleBtns] = useState(0);
   const [openIndices, setOpenIndices] = useState([]);
 
@@ -29,6 +31,25 @@ function PDSec2({ packageView, isInView2 }) {
   const sectionRef2 = useRef(null);
 
   const [stayIsOpen, setStayIsOpen] = useState(false);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_smlm0mi", 'template_h5vec96', form.current, {
+        publicKey: 'T46Q2vlyp0v8VpFSE',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
 
     // Toggle the section open/close
     const toggleOpen = () => {
@@ -130,7 +151,7 @@ function PDSec2({ packageView, isInView2 }) {
 
           <p className="line2"></p>
 
-          <div className="triphigh">
+          {/* <div className="triphigh">
             <h3>{LEFTSIDECONTENT1.tripHighlightsHeading}</h3>
 
             <ul>
@@ -138,7 +159,7 @@ function PDSec2({ packageView, isInView2 }) {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div className="toogleBtns">
             {data?.map((d, index) => (
@@ -211,7 +232,7 @@ function PDSec2({ packageView, isInView2 }) {
 
                         
 
-                          <label>
+                          {/* <label>
                             <div className="shadowdiv">
                               <p>{item.from}</p>
                             </div>
@@ -222,7 +243,7 @@ function PDSec2({ packageView, isInView2 }) {
                               <p>{item.to}</p>
                             </div>
                             <p className="fromtag">TO</p>
-                          </label>
+                          </label> */}
                         </div>
                       </>
                     )}
@@ -300,7 +321,7 @@ function PDSec2({ packageView, isInView2 }) {
 
             <p className="line1"></p>
 
-            <button>
+            <button onClick={()=>setOpenform(true)}>
               <span>REQUEST ENQUIRY</span>
             </button>
 
@@ -315,19 +336,19 @@ function PDSec2({ packageView, isInView2 }) {
               {RIGHTSIDECONTENT2.heading} {packageView?.totalbudget}
             </h3>
 
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <label>
                 <p>
                   Full Name <span>*</span>
                 </p>
-                <input type="text" />
+                <input type="text" name='from_name' />
               </label>
 
               <label>
                 <p>
                   Email <span>*</span>
                 </p>
-                <input type="email" />
+                <input type="email" name='from_email' required />
               </label>
 
               <div className="dohalf">
@@ -335,32 +356,36 @@ function PDSec2({ packageView, isInView2 }) {
                   type="number"
                   placeholder="+91"
                   className="phonenumbeint"
+                  required
                 />
                 <input
                   type="number"
                   placeholder="Your Phone*"
                   className="myphone"
+                  required
+                     name='from_number'
                 />
               </div>
 
               <div className="dohalf">
                 <input
                   type="text"
-                  placeholder="Travel Date*"
+                  placeholder="Travel Date"
                   className="Traveldate"
+                    name='from_travel'
                 />
                 <input
                   type="text"
-                  placeholder="Duration*"
+                  placeholder="Duration"
                   className="Duration"
+                   name='from_duration'
                 />
               </div>
 
               <textarea
                 className="textaremesge"
-                name=""
-                id=""
                 placeholder="Message..."
+                  name="message"
               ></textarea>
 
               <button className="requeeqebtn">
@@ -389,18 +414,18 @@ function PDSec2({ packageView, isInView2 }) {
               <RxCross2 color="#CCF32F" fontSize={40} className="RxCross2d" />
             </div>
             <h3>{RIGHTSIDECONTENT2.heading}</h3>
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <label>
                 <p>
                   Full Name <span>*</span>
                 </p>
-                <input type="text" />
+                <input type="text" name='from_name' />
               </label>
               <label>
                 <p>
                   Email <span>*</span>
                 </p>
-                <input type="email" />
+                <input type="email" name='from_email' />
               </label>
               <div className="dohalf">
                 <input
@@ -412,6 +437,7 @@ function PDSec2({ packageView, isInView2 }) {
                   type="number"
                   placeholder="Your Phone*"
                   className="myphone"
+                    name='from_number'
                 />
               </div>
               <div className="dohalf">
@@ -419,16 +445,19 @@ function PDSec2({ packageView, isInView2 }) {
                   type="text"
                   placeholder="Travel Date*"
                   className="Traveldate"
+                      name='from_travel'
                 />
                 <input
                   type="text"
                   placeholder="Duration*"
                   className="Duration"
+                    name='from_duration'
                 />
               </div>
               <textarea
                 className="textaremesge"
                 placeholder="Message..."
+                  name="message"
               ></textarea>
               <button className="requeeqebtn">
                 <span>REQUEST ENQUIRY</span>
@@ -442,22 +471,3 @@ function PDSec2({ packageView, isInView2 }) {
 }
 
 export default PDSec2;
-
-//  STAY CODE
-
-{
-  /* <div className="pdsefistsec">
-<h3>Stay At</h3>
-<div className="starwrap">
-<h4>{item.stayAt}</h4>
-<p>{item.hotePrice}</p>
-</div>
-<div className="pdsesecondimage">
-  <div className="rowiamges">
-    <img src={item.stayImg1} alt="" />
-    <img src={item.stayImg2} alt="" />
-  </div>
-  <img src={item.stayImg3} className="rec92img" alt="" />
-</div>
-</div> */
-}

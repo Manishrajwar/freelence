@@ -1,11 +1,12 @@
 import React from "react";
 import "./common.css";
+import { Link } from "react-router-dom";
 
 
 function Footer() {
 
 
-  const phoneNumber = '8900913929'; // Replace with the phone number
+  const phoneNumber = '918900913929'; // Replace with the phone number
 
   const handleClick = () => {
     const whatsappUrl = `https://wa.me/${phoneNumber}`;
@@ -35,10 +36,10 @@ function Footer() {
           <div className="fotsec1">
             <label>
               <h3>About Us</h3>
-              <p>Our Story</p>
-              <p>Travel Blogs & tips</p>
-              <p>Working with Us</p>
-              <p>Be Our Partner</p>
+             <Link to={"/about"}> <p>Our Story</p> </Link>
+             {/* <Link to={"/about"}> <p>Travel Blogs & tips</p> </Link>
+             <Link to={"/about"}>  <p>Working with Us</p> </Link>
+             <Link to={"/about"}> <p>Be Our Partner</p> </Link> */}
             </label>
           </div>
 

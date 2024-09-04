@@ -16,9 +16,9 @@ function Footer2() {
     <did className="lastfoteright">
       <span>Follow Us On</span>
       <div className="iconsleft">
-        <img src={ins} alt="" />
-        <img src={linkedin} alt="" />
-        <img src={facebook} alt="" />
+        <a href="https://www.instagram.com/mavenandaman/"> <img  src={ins} alt="" /> </a>
+       <a href="https://www.facebook.com/mavenandaman/"><img src={facebook} alt="" /> </a> 
+        {/* <img src={facebook} alt="" /> */}
       </div>
     </did>
   </div>

@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 import {motion} from "framer-motion"
 import { HEADER_DATA } from "../Data/Home";
 
-function Home() {
+function Home({setOpenform}) {
 
 
   return (
@@ -26,7 +26,7 @@ function Home() {
         className="backgroundFilter"
       />
 
-      <Navbar />
+      <Navbar setOpenform={setOpenform} />
 
       <div className="homeCont">
 
@@ -46,7 +46,7 @@ function Home() {
           >
             {HEADER_DATA.para}
           </motion.p>
-          <motion.button
+          <motion.button onClick={()=>setOpenform(true)}
             initial={{x:-100 , opacity:0}}
             animate={{x:0 , opacity:1}}
            transition={{delay:0.4 , x:{type:"spring" , stiffness:60 } , opacity:{duration:0.6} , ease:"easeIn"}} 

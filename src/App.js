@@ -8,6 +8,7 @@ import Packages from "./pages/Packages";
 
 function App() {
 
+
   return (
   <div className="app">
 <Routes>
@@ -17,6 +18,10 @@ function App() {
   <Route path="/place" element={<Place />} />
   <Route path="/about" element={<About  />} />
   <Route path="/packages" element={<Packages  />} />
+
+
+
+
 
 </Routes>
   </div>
