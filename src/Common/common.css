@@ -240,6 +240,7 @@ cursor: pointer;
 
   .slidebarslidecont.open {
     right: 0; /* Slide into view */
+    z-index: 100000;
   }
 
   .cross22 {

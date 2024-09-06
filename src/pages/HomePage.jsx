@@ -49,9 +49,6 @@ function HomePage() {
 
    <Homesec4 />
 
-   {/* <Homesec5 /> */}
-
-   {/* <Service /> */}
 
 <ReadyGoBanner setOpenform={setOpenform}  />
 
@@ -62,8 +59,6 @@ function HomePage() {
 <Testimonail />
 
 <FrequentQuestion />
-
-{/* <BlogSection /> */}
 
 <Footer />
 

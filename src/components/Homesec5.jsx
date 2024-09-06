@@ -51,7 +51,7 @@ function Homesec5() {
                 slidesPerView:2
               } ,
               200:{
-                slidesPerView:1
+                slidesPerView:1.15
               }
             }}
           >

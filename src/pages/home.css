@@ -2,7 +2,9 @@
     position: relative;
      width: 100%;
      min-height: 100vh;
+     height: fit-content;
      overflow-x: hidden !important;
+     overflow-y: hidden;
 }
 
 .background{
@@ -369,5 +371,16 @@ max-width: 430px;
 
     .TopDestiSwiper{
         display: flex;
+    }
+}
+
+@media (max-width:450px) {
+    .homeContent h2{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .homeContent p{
+        font-size: 16px;
+        line-height: 26px;
     }
 }

@@ -213,7 +213,7 @@ color: #969494;
   @media (max-width:1340px) {
     .singswipe{
         max-width: 500px;
-        height: 444px;
+        height: 504px;
     }
     .checkdbtns{
        width: 90%;
@@ -222,7 +222,7 @@ color: #969494;
   @media (max-width:1160px) {
     .singswipe{
         max-width: 560px;
-        height: 474px;
+        height: 504px;
     }
     .checkdbtns{
        width: 90%;
@@ -248,7 +248,7 @@ color: #969494;
   @media (max-width:750px) {
     .singswipe{
         max-width: 560px;
-        height: fit-content;
+        height: 510px;
         padding-bottom: 24px;
     }
     .swiperbtns{

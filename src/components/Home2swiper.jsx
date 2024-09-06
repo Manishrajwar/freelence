@@ -3,7 +3,7 @@ import icon from "../assets/icon.png";
 import "./component.css"
 import 'swiper/css';
 import 'swiper/css/navigation'; // Import navigation styles
-import { Navigation  , Autoplay } from 'swiper/modules';
+import { Navigation  , Autoplay , Pagination  } from 'swiper/modules';
 import {  TOP_PACKAGES } from '../Data/Home';
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 
@@ -17,7 +17,7 @@ const Home2swiper = forwardRef((props, ref) => {
   return (
     <Swiper
       rewind={true}
-      modules={[Navigation, Autoplay]}
+      modules={[Navigation, Autoplay , Pagination]}
       className="mySwiper"
       slidesPerView={2}
       spaceBetween={20}
@@ -28,9 +28,11 @@ const Home2swiper = forwardRef((props, ref) => {
       breakpoints={{
         1160: {
           slidesPerView: 2, 
+          pagination:true ,
         },
         200:{
-          slidesPerView:1 
+          slidesPerView:1.15  , 
+        
         }
       }}
     >

@@ -22,6 +22,13 @@
     justify-content: space-between;
 }
 
+.IoIosArrowDownwrap{
+    min-width: 20px;
+}
+
+.IoIosArrowDown{
+    font-size: 18px !important;
+}
 .tranpoorwrap h4{
     font-family: Poppins;
     font-size: 14px;
@@ -115,12 +122,11 @@ box-shadow: 0px 4px 4px 0px #00000040;
 .pds2left .pdlepar1{
   display: flex;
   gap: 4px;
-  align-items: flex-end;
   font-family: Poppins;
 font-size: 24px;
 font-weight: 600;
 line-height: 20px;
-text-align: left;
+
 color: #000000;
 }
 .pds2left .pdlepar1 p{
@@ -132,8 +138,12 @@ font-size: 40px;
     font-size: 16px;
     font-weight: 500;
     line-height: 20px;
+    margin-top:7px;
     text-align: left;
 color: #A4A1A1;    
+}
+.pdlepar1 div{
+    margin-top: 7px;
 }
 .pds2left .pdlepar2{ 
     font-family: Poppins;
@@ -696,7 +706,7 @@ flex-direction: column;
 .stayright{
     font-family: Poppins;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
 }
 
@@ -728,7 +738,7 @@ font-weight: 600;
 line-height: 27px;
 text-align: left;
 color: #000000;
-max-width: 60%;
+/* max-width: 60%; */
 }
 
 .lineh2{
@@ -749,6 +759,17 @@ font-size: 18px;
 font-weight: 500;
 line-height: 27px;
 color: #000000;
+max-width: 154px;
+width: 100%;
+}
+
+.navipack{
+justify-content: space-between;
+width: 100%;
+}
+
+.divwrapck{
+    width: calc(100% - 155px)
 }
 
 .aftetext{
@@ -1124,7 +1145,7 @@ gap:6px;
 color: #008753;        
     }
 
-    
+
   }
 
   @media (max-width:800px) {
@@ -1143,6 +1164,15 @@ color: #008753;
         font-size: 14px;
         line-height: 24px;
     }
+  }
+
+  @media (max-width:650px) {
+    
+.totalcost{
+font-size: 14px;
+line-height: 24px;
+max-width: 124px;
+}
   }
 
   @media (max-width:550px) {
@@ -1230,6 +1260,10 @@ color: #008753;
         display: flex;
         flex-direction: column;
     }
+    .totalcost{
+        max-width: 90px;
+        font-size: 10px !important;
+        }
     .pdSec2left h2{
       font-size: 20px;
       line-height: 30px;
@@ -1238,6 +1272,9 @@ color: #008753;
     .pds22leftop{
         display: flex;
         align-items: flex-start;
+    }
+    .arivepotalDiv{
+        padding: 15px 10px !important;
     }
 
   }

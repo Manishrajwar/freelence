@@ -15,12 +15,13 @@ const topDestiSwiper = () => {
       className="mySwiper44"
       slidesPerView={1}
       spaceBetween={20}
+      loop={true}
       breakpoints={{
         1160: {
           slidesPerView: 2,
         },
         200: {
-          slidesPerView: 1,
+          slidesPerView: 1.15,
         },
       }}
     >

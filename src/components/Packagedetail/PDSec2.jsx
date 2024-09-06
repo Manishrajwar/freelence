@@ -186,13 +186,18 @@ function PDSec2({ packageView, isInView2  , setOpenform}) {
                     className="flex items-center justify-between cursor-pointer"
                     onClick={() => toggleDetails(index)}
                   >
-                    <nav>
+                    <nav className="navipack">
+                      <div className="flex items-center gap-5 divwrapck">
                       <p className="daytag">Day {item.daynum}</p>
                       <p className="arivtext">{item.title}</p>
+                      </div>
                       <p className="lineh2"></p>
                       <p className="totalcost">Total Cost: {item.totalcost}</p>
                     </nav>
-                    <IoIosArrowDown />
+                    <div className="IoIosArrowDownwrap">
+
+                    <IoIosArrowDown className="IoIosArrowDown" />
+                    </div>
                   </div>
 
                   <motion.div
@@ -314,7 +319,7 @@ function PDSec2({ packageView, isInView2  , setOpenform}) {
 
               <div className="pds2left">
                 <p className="pdlepar1">
-                  INR <p>{Math.floor(packageView?.GrandTotal/packageView?.numberOfPeople)}</p> <span>per person</span>{" "}
+                  <div>INR</div> <p>{Math.floor(packageView?.GrandTotal/packageView?.numberOfPeople)}</p> <span>per person</span>{" "}
                 </p>
               </div>
             </div>

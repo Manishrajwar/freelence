@@ -3,7 +3,6 @@ import "./place.css";
 import { TOP_PLACES } from "../Data/Place";
 import { RxCross2 } from "react-icons/rx";
 import { useState, useEffect } from "react";
-import img1 from '../assets/Rectangle1.png'
 
 
 function Place() {

@@ -11,6 +11,8 @@ import Homesec5 from '../components/Homesec5';
 import { RIGHTSIDECONTENT2 } from '../Data/PackageDetail';
 import { ImCross } from 'react-icons/im';
 import emailjs from '@emailjs/browser';
+import Footer from '../Common/Footer';
+import Footer2 from '../Common/Footer2';
 
 
 function PackageDetail() {
@@ -99,9 +101,13 @@ function PackageDetail() {
 
          <Homesec5 />
 
+
          {/* <PDSec5 /> */}
        </div>
 
+
+       <Footer />
+         <Footer2 />
 
  
 {

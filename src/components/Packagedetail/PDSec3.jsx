@@ -26,7 +26,7 @@ function PDSec3({sectionRef2 , packageView}) {
      
            {
             packageView?.transportTicket?.map((item , index)=>(
-              <label className="itempriceleft"  key={index}>
+              <label className=""  key={index}>
               <p>{item?.title}</p>
               <span >{item?.price}</span>
             </label>
