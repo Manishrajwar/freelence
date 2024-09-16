@@ -1,11 +1,11 @@
 import swipbg from "../assets/swipebg.png";
 import bannerimg from "../assets/bannerimg.png";
 import img from "../assets/Img.png";
-import frame from "../assets/frame1.png";
-import frame1 from "../assets/frame2.png";
-import frame2 from "../assets/frame3.png";
-import frame3 from "../assets/frame4.png";
-import frame4 from "../assets/frame5.png";
+// import frame from "../assets/frame1.png";
+import frame1 from "../assets/frame1.png";
+// import frame2 from "../assets/frame3.png";
+import frame3 from "../assets/frame3.png";
+import frame4 from "../assets/frame4.png";
 import img1 from "../assets/unsplash_S9xHSYaLmUo.png";
 import card1 from "../assets/Card 1.png";
 import location from "../assets/location.png";
@@ -59,29 +59,29 @@ export const BANNER_DETAIL = {
 // ============Homesec4.jsx file data ==============
 
 export const TOP_DESTINATIONS = {
-  image1: frame,
+  image1: frame1,
   title1: "Cellular Jail",
 
   image2: frame4,
   title2: "Corbyn's Cove Beach",
 
-  image3: frame3,
+  // image3: frame3,
   title3: "Radhanagar Beach",
 
-  image4: frame2,
+  // image4: frame2,
   title4: "Kalapathar Beach",
 
-  image5: frame1,
-  title5: "Ross Island",
+  image5: frame3,
+  title5: "Neil Island",
 };
 
 export const TOP_DESTINATIONS2 = [
-  { image: frame, title: "Cellular Jail" },
+  // { image: frame, title: "Cellular Jail" },
 
   { image: frame4, title: "Corbyn's Cove Beach" },
   { image: frame3, title: "Radhanagar Beach" },
 
-  { image: frame2, title: "Kalapathar Beach" },
+  // { image: frame2, title: "Kalapathar Beach" },
 
   { image: frame1, title: "Ross Island" },
 ];
