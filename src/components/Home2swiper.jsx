@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import icon from "../assets/icon.png";
+import icon from "../assets/clock.png";
 import "./component.css"
 import 'swiper/css';
 import 'swiper/css/navigation'; // Import navigation styles
@@ -30,6 +30,10 @@ const Home2swiper = forwardRef((props, ref) => {
           slidesPerView: 2, 
           pagination:true ,
         },
+        750:{
+          slidesPerView:1 , 
+        
+        } ,
         200:{
           slidesPerView:1.15  , 
         
@@ -39,7 +43,7 @@ const Home2swiper = forwardRef((props, ref) => {
 
       {
         TOP_PACKAGES.map((item , index)=>(
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className='singlwiperslide'>
 
           <div className="singswipe">
 
@@ -54,11 +58,15 @@ const Home2swiper = forwardRef((props, ref) => {
                 <h3>{item.title}</h3>
               </div>
               <p>
-                <img src={icon} alt="Icon" /> <span>{item.dayNight}</span>
+                <img src={icon} alt="Icon" /> <span className='daynighfs'>{item.dayNight}</span>
               </p>
             </div>
 
-             <p className="suubtitle">{item.subtitle} <p className='perperontext'>₹{Math.floor(item?.GrandTotal/item?.numberOfPeople)} <span>/person</span></p></p>
+ <div className='subtitlewrap'>
+
+             <p className="suubtitle"> {item.subtitle}  </p>
+              <p className='perperontext'>₹{Math.floor(item?.GrandTotal/item?.numberOfPeople)}<span>/- Each Person </span></p> </div>
+            
 
 
             <a href={`/packageDetail/${item.id}`} className="checkdbtns"> <button  className="checkdbtns">

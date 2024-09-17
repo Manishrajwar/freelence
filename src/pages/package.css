@@ -95,9 +95,9 @@ border-radius: 20px 20px 0px 0px;
 
 .bestsellertag{
     position: absolute;
-    right: 40px;
-    top: 32px;
-    width: 134px;
+    right: 30px;
+    top: 22px;
+    width: 124px;
 height: 40px;
 border-radius: 8px ;
 background: #000000;
@@ -113,6 +113,23 @@ justify-content: center;
     font-weight: 600;
     line-height: 24.2px;
 color: #FFFFFF;    
+}
+
+@media (max-width:600px) {
+  
+.bestsellertag{
+  right: 20px;
+  top: 18px;
+  width: 100px;
+height: 30px;
+
+
+
+}
+.bestsellertag span{
+ font-size: 16px;
+ line-height: 26px;
+}
 }
 
 .swimidCont2{

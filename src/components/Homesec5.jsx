@@ -62,6 +62,7 @@ function Homesec5() {
                   <img src={item.img} alt="img" className="sec5img" />
   
                   <div className="s5conteent">
+
                     <div className="s5itemclock">
                       <img src={clock} alt="" />
                       <span>{item.dayNight}</span>
@@ -70,6 +71,8 @@ function Homesec5() {
                     <p className="s5imepara">
                      {item.title}
                     </p>
+
+                    <div className="perSsoontag"> ${item?.perPerson}<span>/person</span> </div>
   
                   </div>
   

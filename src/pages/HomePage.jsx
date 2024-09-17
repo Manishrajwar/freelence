@@ -49,7 +49,6 @@ function HomePage() {
 
    <Homesec4 />
 
-
 <ReadyGoBanner setOpenform={setOpenform}  />
 
 <Homesec5 />

@@ -29,7 +29,9 @@ function Homesec4() {
                 duration: 1.5,
               }} className='imagewraps1'>
 
-            <img src={TOP_DESTINATIONS.image1} alt=""
+            <img
+              src={TOP_DESTINATIONS.image1}
+              alt="image1" className='jainimg'
             />
 
             <div className="framecont">

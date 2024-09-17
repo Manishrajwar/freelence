@@ -11,6 +11,13 @@
     padding: 0px 14px;
 } 
 
+.subtitlewrap{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 40px;
+}
+
 .appseleft{
     padding: 50px 0px;
 }
@@ -32,6 +39,14 @@
     justify-content: center;
  padding: 14px 30px;
 }
+.daynighfs{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #858396;
+}
  .cantafort span{
     font-family: Inter;
     font-size: 34px;
@@ -47,8 +62,7 @@ color: #FFFFFF;
     display: flex;
     align-items: center;
     font-weight: 500;
-    padding-left: 40px;
-    line-height: 44px;
+    line-height: 28px;
 color: black;    
 }
 .hs2top h2{
@@ -59,6 +73,7 @@ line-height: 48.41px;
 text-align: center;
 color: #000000;
 }
+
 
 .singswipe{
     max-width: 584.5px;
@@ -83,9 +98,9 @@ border-radius: 20px 20px 0px 0px;
 
 .bestsellertag{
     position: absolute;
-    right: 40px;
-    top: 32px;
-    width: 134px;
+    right: 30px;
+    top: 22px;
+    width: 124px;
 height: 40px;
 border-radius: 8px ;
 background: #000000;
@@ -103,6 +118,24 @@ justify-content: center;
 color: #FFFFFF;    
 }
 
+@media (max-width:600px) {
+  
+    .bestsellertag{
+      right: 20px;
+      top: 18px;
+      width: 100px;
+    height: 30px;
+    
+    
+    
+    }
+    .bestsellertag span{
+     font-size: 16px;
+     line-height: 26px;
+    }
+    }
+
+    
 .swimidCont{
     padding: 0px 32px;
     display: flex;
@@ -133,13 +166,13 @@ width: 186px;
     align-items: center;
     gap: 8px;
 }
-.swimidCont p span{
+/* .swimidCont p span{
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
 color: #000000;    
-}
+} */
 
 .mySwiper{
   width: 100%;
@@ -162,6 +195,7 @@ margin: 0 auto;
     font-weight: 600;
     line-height: 24.2px;
 color: #000000;    
+text-align: center;
 }
 .swiper-container {
     display: flex;
@@ -195,8 +229,8 @@ color: #000000;
     font-family: Poppins;
 font-size: 22px;
 font-weight: 600;
-padding: 0px 10px;
-line-height: 42px;
+/* padding: 0px 10px; */
+line-height: 32px;
 text-align: left;
 color: #000000;
   }
@@ -248,7 +282,9 @@ color: #969494;
   @media (max-width:750px) {
     .singswipe{
         max-width: 560px;
-        height: 510px;
+        min-height: 450px;
+        height: fit-content;
+
         padding-bottom: 24px;
     }
     .swiperbtns{
@@ -282,6 +318,26 @@ color: #969494;
         font-size: 18px;
     }
     
+    .swimidCont .swmidcleft h3{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .suubtitle{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    /* .swimidCont p span{
+        font-size: 14px;
+        line-height: 24px;
+    } */
+    .daynighfs{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .checkdbtns span{
+        font-size: 16px !important;
+        line-height: 26px;
+    }
    
   }
 

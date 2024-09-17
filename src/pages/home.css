@@ -166,6 +166,12 @@ color: #141841;
     width: 100%;
     max-height: 404px;
     height: 100%;
+    /* background-color: red; */
+}
+
+.imagewraps1 img{
+    min-width: 390px !important; 
+    min-height: 404px !important;
 }
 .imagewraps1 img{
    width: 100%;
