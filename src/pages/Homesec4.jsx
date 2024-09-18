@@ -31,12 +31,12 @@ function Homesec4() {
 
             <img
               src={TOP_DESTINATIONS.image1}
-              alt="image1" className='jainimg'
+              alt="image1" 
             />
 
-            <div className="framecont">
+            {/* <div className="framecont">
               <p>{TOP_DESTINATIONS.title1}</p>
-            </div>
+            </div> */}
 
             </motion.div>
 
@@ -66,9 +66,9 @@ function Homesec4() {
               alt=""
             />
 
-<div className="framecont">
+{/* <div className="framecont">
               <p>{TOP_DESTINATIONS.title2}</p>
-            </div>
+            </div> */}
 
 
 
@@ -96,9 +96,9 @@ function Homesec4() {
               alt=""
             />
 
-            <div className="framecont">
+            {/* <div className="framecont">
               <p>{TOP_DESTINATIONS.title3}</p>
-            </div>
+            </div> */}
 
             </motion.div>
 
@@ -120,10 +120,10 @@ function Homesec4() {
               src={TOP_DESTINATIONS.image4}
               alt=""
             />
-
+{/* 
             <div className="framecont">
               <p>{TOP_DESTINATIONS.title4}</p>
-            </div>
+            </div> */}
 
             </motion.div>
 
@@ -145,10 +145,10 @@ function Homesec4() {
               src={TOP_DESTINATIONS.image5}
               alt=""
             />
-
+{/* 
             <div className="framecont">
               <p>{TOP_DESTINATIONS.title5}</p>
-            </div>
+            </div> */}
 
             </motion.div>
 

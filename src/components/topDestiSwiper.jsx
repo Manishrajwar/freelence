@@ -30,7 +30,7 @@ const topDestiSwiper = () => {
       <SwiperSlide key={index}>
         <div className="singleTopdesti">
              <img src={item.image} alt="" />
-             <p className="destiname">{item.title}</p>
+             {/* <p className="destiname">{item.title}</p> */}
         </div>
       </SwiperSlide>
 

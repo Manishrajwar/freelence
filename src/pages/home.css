@@ -170,14 +170,10 @@ color: #141841;
 }
 
 .imagewraps1 img{
-    min-width: 390px !important; 
-    min-height: 404px !important;
+   width: 390px ; 
+    height: 404px;
 }
-.imagewraps1 img{
-   width: 100%;
-   height: 404px;
-   
-}
+
 
 .imagewraps2{
     position: relative;
@@ -257,8 +253,7 @@ max-width: 430px;
 }
 .imagewraps1 img{
     width: 100%;
-    height: 350px;
-    
+    height: 350px !important;
  }
 
 }
@@ -326,11 +321,7 @@ max-width: 430px;
         max-height: 300px;
     }
     .imagewraps1 img{
-        position: relative;
-        max-width: 390px;
-        width: 100%;
-        max-height: 300px;
-        height: 100%;
+      height: 250px !important;
     }
 
     
