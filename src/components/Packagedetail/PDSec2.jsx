@@ -151,16 +151,6 @@ function PDSec2({ packageView, isInView2  , setOpenform}) {
 
           <p className="line2"></p>
 
-          {/* <div className="triphigh">
-            <h3>{LEFTSIDECONTENT1.tripHighlightsHeading}</h3>
-
-            <ul>
-              {LEFTSIDECONTENT1.tripHightlight.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div> */}
-
           <div className="toogleBtns">
             {data?.map((d, index) => (
               <button
@@ -263,6 +253,7 @@ function PDSec2({ packageView, isInView2  , setOpenform}) {
 
         <div className="staywrap">
       {/* Clickable header */}
+      
       <div className="cursor-pointer" onClick={toggleOpen}>
         <p className="totalcost">Hotels</p>
       </div>
@@ -308,6 +299,7 @@ function PDSec2({ packageView, isInView2  , setOpenform}) {
 
 
           </div>
+
         </div>
 
         {/* right side  */}

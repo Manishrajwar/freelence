@@ -21,6 +21,8 @@ function PackageDetail() {
 
    const [packageView, setPackageView] = useState(null);
    const [openform , setOpenform ] = useState(false);
+   const [isInView2, setIsInView2] = useState(true);
+   const sectionRef2 = useRef(null);
 
 
    const form = useRef();
@@ -58,10 +60,6 @@ function PackageDetail() {
      }
    }, [id, navigate]);
 
-
-
-   const [isInView2, setIsInView2] = useState(true);
-   const sectionRef2 = useRef(null);
  
    useEffect(() => {
      const observer = new IntersectionObserver(
