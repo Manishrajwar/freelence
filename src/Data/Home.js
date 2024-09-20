@@ -104,7 +104,7 @@ export const TOP_PACKAGES = [
           desti: "Port Blair",
         },
         {
-          day: "2",
+          day: "1",
           desti: "Shaheed Dweep",
         },
         {
@@ -130,6 +130,7 @@ export const TOP_PACKAGES = [
        subtitle:"2 Adults + 1 child" , 
       totalbudget: "₹72,670",
       perPerson:"24223" ,
+      totalHotel:"36,720" ,
 
       itinerary: [
         {
@@ -315,19 +316,25 @@ export const TOP_PACKAGES = [
             at:"Port Blair", 
             hotel:"Hotel Bell Elite Premium Deluxe room without balcony",
             equa:"4,600 x 1 room x 3 nights", 
-            price:"13,800"
+            price:"13,800" , 
+            childequa:"1,000 x 1 CWoM x 3 nights" , 
+            childprice:"3,000"
           } , 
           {
             at:"Swaraaj Dweep", 
             hotel:"Lemon Grass beach resort Lagoon",
             equa:"5,600 x 1 room x 2 nights", 
-            price:"11,200"
+            price:"11,200" ,
+               childequa:"1,000 x 1 CWoM x 2 nights" , 
+            childprice:"2,000"
           } , 
           {
             at:"Shaheed Dweep", 
             hotel:"Tango Beach Resort Lagoon",
-            equa:"5,600 x 1 room x 2 nights", 
-            price:"11,200"
+            equa:"5,824 x 1 room x 1 night", 
+            price:"5,824" , 
+            childequa:"896 x 1 CWoM x 1 night" , 
+            childprice:"896"
           } , 
 
       ] ,
@@ -349,6 +356,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"3,452" , 
       GSTCharge:"173" , 
       GrandTotal:72670 , 
+      GrandTotal2:"72,670" ,
       numberOfPeople:3
 
     },
@@ -360,6 +368,7 @@ export const TOP_PACKAGES = [
       
       days: "6",
       night: "5",
+
       dayIn: [
         {
           day: "2",
@@ -376,6 +385,7 @@ export const TOP_PACKAGES = [
         },
       
       ],
+
       included: [
         {
           img: location,
@@ -386,6 +396,7 @@ export const TOP_PACKAGES = [
           title: "Stay Included",
         },
       ],
+
       title: "Trip duration 5 nights & 6 days ",
        subtitle:"2 Adults + 2 childeren of 3 and 6 years" , 
       totalbudget: "34,104",
@@ -396,23 +407,30 @@ export const TOP_PACKAGES = [
           at:"Port Blair", 
           hotel:"Hotel Bell Elite Premium Deluxe room without balcony",
           equa:"5,000 x 1 rooms x 2 nights", 
-          price:"10,000"
+          price:"10,000" , 
+            childwtiheq:"1,200 x 1 CWM x 2 nights" , 
+            childwprice:"2,400"
         } , 
         {
           at:"Swaraaj Dweep", 
           hotel:"Lemon Grass beach resort Lagoon",
           equa:"5,600 x 1 room x 2 nights", 
-          price:"11,200"
+          price:"11,200" , 
+          childwtiheq:"1,500 x 1 CWM x 2 nights " , 
+          childwprice:"3,000"
         } , 
         {
           at:"Shaheed Dweep", 
           hotel:"Tango Beach Resort Lagoon",
           equa:"5,824 x 1 room x 1 night ", 
-          price:"5,824"
+          price:"5,824" , 
+          childwtiheq:"1,680 x 1 CWM x 1 night" , 
+          childwprice:"1,680"
         } , 
 
     ] ,
     totalStay:"₹34,104" , 
+    hotelCP:"34,104" , 
      
       itinerary: [
         {
@@ -571,8 +589,6 @@ export const TOP_PACKAGES = [
         },
       ],
       totalCost: "68,117",
-
-      hotelCP:"34,104" , 
       transportTicket:[
         {
           title:"Total for transportation, entry tickets and speed boat tickets" ,
@@ -589,6 +605,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"3,236" , 
       GSTCharge:"162" , 
       GrandTotal:68117 , 
+      GrandTotal2:"68,117" , 
        numberOfPeople:4
     
     },
@@ -806,7 +823,8 @@ export const TOP_PACKAGES = [
       ],
       totalCost: "33,970",
 
-      hotelCP:" 61,200" , 
+      hotelCP:"61,200" , 
+      
       transportTicket:[
         {
           title:"Total for transportation, entry tickets and speed boat tickets" ,
@@ -823,6 +841,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"4,759" , 
       GSTCharge:"238" , 
       GrandTotal:100167 , 
+      GrandTotal2:"1,00,167" , 
        numberOfPeople:6
      
     },
@@ -1051,6 +1070,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"2,160" , 
       GSTCharge:"108" , 
       GrandTotal:45477, 
+      GrandTotal2:"45,477", 
        numberOfPeople:3
    
     },
@@ -1096,19 +1116,35 @@ export const TOP_PACKAGES = [
           at:"Swaraaj Dweep", 
           hotel:"Aquays beach resort Havelock Plaza",
           equa:"6,000 x 1 room x 2 nights", 
-          price:"12,000"
+          price:"12,000" , 
+
+             childequa:"1,500 x 1 CWoM x 2 nights" , 
+            childprice:"3,000" , 
+            childwtiheq:" 2,000 x 1 CWM x 2 nights" , 
+            childprice:"4,000" , 
+
         } , 
         {
           at:"Shaheed Dweep", 
           hotel:"Aquays beach resort Neil Plaza room ",
           equa:"5,000 x 1 room x 1 night", 
-          price:"5,000"
+          price:"5,000" , 
+
+          childequa:"1,500 x 1 CWoM x 1 night" , 
+          childprice:"1,500" , 
+          childwtiheq:"2,000 x 1 CWM x 1 night" , 
+          childprice:"2,000" , 
         } , 
         {
           at:"Port Blair", 
           hotel:"Hotel Darwin City Darwin Deluxe",
           equa:" 4,300 x 1 room x 2 nights ", 
-          price:"8,600"
+          price:"8,600" , 
+
+          childequa:"1,000 x 1 CWoM x 2 nights" , 
+          childprice:"2,000" , 
+          childwtiheq:"1,200 x 1 CWM x 2 nights" , 
+          childprice:"2,400" , 
         } , 
         
 
@@ -1285,6 +1321,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"3,605" , 
       GSTCharge:"180" , 
       GrandTotal:75880 , 
+      GrandTotal2:"75,880" , 
        numberOfPeople:4
    
     },
@@ -1552,6 +1589,7 @@ export const TOP_PACKAGES = [
       serviceCharge:" 2,887" , 
       GSTCharge:"144" , 
       GrandTotal:60780 ,
+      GrandTotal2:"60,780 ",
        numberOfPeople:2
  
     },
@@ -1755,6 +1793,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"1,786" , 
       GSTCharge:"89" , 
       GrandTotal:37600, 
+      GrandTotal2:"37,600", 
        numberOfPeople:2
     
     },
@@ -1979,8 +2018,6 @@ export const TOP_PACKAGES = [
       ],
 
       totalCost: "19,335",
-
-      
       hotelCP:"27,104" , 
       transportTicket:[
         {
@@ -1998,6 +2035,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"2,322" , 
       GSTCharge:"116" , 
       GrandTotal:48877 , 
+      GrandTotal2:"48,877" , 
        numberOfPeople:2
      
     },
@@ -2045,7 +2083,7 @@ export const TOP_PACKAGES = [
         } ,  
         {
           at:"Swaraaj Dweep", 
-          hotel:" Radhakrihsna Hotel AC room",
+          hotel:"Radhakrihsna Hotel AC room",
           equa:"2,000 x 2 rooms x 2 nights", 
           price:"8,000"
         } , 
@@ -2243,7 +2281,6 @@ export const TOP_PACKAGES = [
         },
       ],
       totalCost: "39,125",
-
       hotelCP:"29,200" , 
       transportTicket:[
         {
@@ -2261,6 +2298,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"3,416" , 
       GSTCharge:"171" , 
       GrandTotal:71912, 
+      GrandTotal:"71,912", 
        numberOfPeople:4
   
     },
@@ -2555,6 +2593,7 @@ export const TOP_PACKAGES = [
       serviceCharge:"5,063" , 
       GSTCharge:"253" , 
       GrandTotal:106566 , 
+      GrandTotal2:"1,06,566", 
        numberOfPeople:6
 
     },
