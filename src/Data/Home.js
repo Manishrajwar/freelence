@@ -1071,7 +1071,7 @@ export const TOP_PACKAGES = [
       GSTCharge:"108" , 
       GrandTotal:45477, 
       GrandTotal2:"45,477", 
-       numberOfPeople:3
+       numberOfPeople:2
    
     },
 
